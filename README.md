@@ -38,11 +38,11 @@ No installation is needed. An internet connection is required for Tailwind CSS a
 
 ## Screenshots
 
-I'll add screenshots of the finished pages here after deployment.
+I'll add screenshots of the pages here soon.
 
 ## Live website
 
-Deployment link will be added soon.
+[View the live website](https://chapter-and-chai.vercel.app/)
 
 ## Note
 
