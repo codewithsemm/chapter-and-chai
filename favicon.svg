@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Chapter &amp; Chai — book and chai cup</title>
+  <rect width="64" height="64" rx="14" fill="#251B16"/>
+  <!-- Open book -->
+  <path d="M9 35c8-3 15-2 23 2v15c-8-4-15-5-23-2V35Z" fill="#F5EBDD"/>
+  <path d="M55 35c-8-3-15-2-23 2v15c8-4 15-5 23-2V35Z" fill="#E8D5B7"/>
+  <path d="M32 37v15" stroke="#B77946" stroke-width="2" stroke-linecap="round"/>
+  <!-- Chai cup with handle -->
+  <path d="M22 20h20v6c0 7-4 11-10 11s-10-4-10-11v-6Z" fill="#B77946"/>
+  <path d="M42 22h3a5 5 0 0 1 0 10h-5" fill="none" stroke="#B77946" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M28 11c-3 3 3 4 0 7M36 11c-3 3 3 4 0 7" fill="none" stroke="#F5EBDD" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
