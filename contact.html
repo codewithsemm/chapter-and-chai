@@ -180,7 +180,7 @@
         </div>
         <div class="grid gap-16 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.8fr)] lg:gap-24">
           <div class="min-w-0">
-            <form class="space-y-8" aria-describedby="demo-form-note">
+            <form id="contact-demo-form" class="space-y-8" aria-describedby="demo-form-note" action="#write-to-us" method="post">
               <div class="grid gap-8 sm:grid-cols-2">
                 <div>
                   <label for="full-name" class="mb-2 block text-sm font-semibold">Your name <span
@@ -225,11 +225,12 @@
                   class="w-full min-w-0 resize-y rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]"></textarea>
               </div>
               <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required
-                fields. This form is a design preview for a fictional café. You can try the fields, but sending is
-                disabled: no messages are submitted or stored.</p>
-              <button type="button" disabled aria-describedby="demo-form-note"
-                class="inline-flex cursor-not-allowed items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] opacity-65 dark:bg-[#B77946] dark:text-[#251B16]">Sending
-                unavailable <span aria-hidden="true">↗</span></button>
+                fields. This is an interactive demo for a fictional café. Submitting checks your entries and shows a
+                confirmation on this page only. No message is sent, stored or shared.</p>
+              <button type="submit" aria-describedby="demo-form-note"
+                class="inline-flex items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] transition-colors hover:bg-[#553B2C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78] dark:focus-visible:outline-[#E6AC78]">Submit demo message <span aria-hidden="true">↗</span></button>
+              <p id="demo-form-status" role="status" aria-live="polite" aria-atomic="true"
+                class="hidden max-w-lg rounded-xl border border-[#BFA78E] bg-[#F5EBDD] px-5 py-4 text-sm leading-6 text-[#251B16] dark:border-[#7A6050] dark:bg-[#382820] dark:text-[#F5EBDD]"></p>
             </form>
           </div>
           <aside aria-label="Visit information" class="min-w-0">
@@ -364,6 +365,30 @@
     </div>
   </footer>
   <script>
+    // Frontend-only demo: native browser validation runs before the submit event.
+    // Do not transmit, log or persist any of the visitor's form entries.
+    (() => {
+      const form = document.getElementById('contact-demo-form');
+      const status = document.getElementById('demo-form-status');
+      if (!form || !status) return;
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        status.textContent = 'Demo submitted successfully! Your form passed validation. This is a fictional café, so no message was sent or saved.';
+        status.classList.remove('hidden');
+        form.reset();
+      });
+
+      form.addEventListener('input', () => {
+        status.classList.add('hidden');
+        status.textContent = '';
+      });
+      form.addEventListener('change', () => {
+        status.classList.add('hidden');
+        status.textContent = '';
+      });
+    })();
+
     // Keep the hero image visible behind the navbar until the page is scrolled.
     (() => {
       const header = document.querySelector('.site-header');
