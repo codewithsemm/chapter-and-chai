@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-pt-24">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chapter & Chai is a concept book café in Jaipur: thoughtfully brewed coffee, cozy reading corners and bookish community events.">
+  <meta name="description"
+    content="Chapter & Chai is a concept book café in Jaipur: thoughtfully brewed coffee, cozy reading corners and bookish community events.">
   <meta name="theme-color" content="#251B16">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Chapter & Chai | Coffee, Books & Conversations</title>
@@ -13,13 +15,15 @@
   <meta property="og:site_name" content="Chapter &amp; Chai">
   <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Chapter &amp; Chai | Coffee, Books &amp; Conversations">
-  <meta property="og:description" content="Chapter &amp; Chai is a concept book café in Jaipur: thoughtfully brewed coffee, cozy reading corners and bookish community events.">
+  <meta property="og:description"
+    content="Chapter &amp; Chai is a concept book café in Jaipur: thoughtfully brewed coffee, cozy reading corners and bookish community events.">
   <meta property="og:url" content="https://chapter-and-chai.vercel.app/">
   <meta property="og:image" content="https://chapter-and-chai.vercel.app/assets/images/Home%20Page/home-hero.jpg">
   <meta property="og:image:alt" content="Coffee and books in the warm Chapter &amp; Chai café">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chapter &amp; Chai | Coffee, Books &amp; Conversations">
-  <meta name="twitter:description" content="Chapter &amp; Chai is a concept book café in Jaipur: thoughtfully brewed coffee, cozy reading corners and bookish community events.">
+  <meta name="twitter:description"
+    content="Chapter &amp; Chai is a concept book café in Jaipur: thoughtfully brewed coffee, cozy reading corners and bookish community events.">
   <meta name="twitter:image" content="https://chapter-and-chai.vercel.app/assets/images/Home%20Page/home-hero.jpg">
   <!-- End SEO and social sharing metadata -->
 
@@ -27,33 +31,75 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Navbar stays transparent over the hero, then gains contrast when scrolling. -->
+  <style>
+    .site-header {
+      background-color: transparent;
+      transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
+    }
+
+    .site-header.is-scrolled {
+      background-color: rgba(37, 27, 22, 0.95);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header {
+        transition: none;
+      }
+    }
+  </style>
 </head>
+
 <body class="min-w-0 bg-[#F5EBDD] font-['Inter'] text-[#251B16] antialiased dark:bg-[#251B16] dark:text-[#F5EBDD]">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]">Skip to main content</a>
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]">Skip
+    to main content</a>
 
   <!-- HEADER / NAVIGATION -->
-  <header class="absolute inset-x-0 top-0 z-30 text-[#F5EBDD]">
-    <nav aria-label="Main navigation" class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
-      <a href="index.html" aria-label="Chapter and Chai, home" class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl">
+  <header class="site-header fixed inset-x-0 top-0 z-40 text-[#F5EBDD]">
+    <nav aria-label="Main navigation"
+      class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
+      <a href="index.html" aria-label="Chapter and Chai, home"
+        class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl">
         Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span class="text-[#E6AC78]">.</span>
       </a>
       <div class="hidden items-center gap-6 md:flex lg:gap-8">
-        <a href="index.html" aria-current="page" class="border-b-2 border-[#E6AC78] pb-1 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Home</a>
-        <a href="menu.html" class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Menu</a>
-        <a href="gallery.html" class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Gallery</a>
-        <a href="events.html" class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Events</a>
-        <a href="contact.html" class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Contact</a>
+        <a href="index.html" aria-current="page"
+          class="border-b-2 border-[#E6AC78] pb-1 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Home</a>
+        <a href="menu.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Menu</a>
+        <a href="gallery.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Gallery</a>
+        <a href="events.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Events</a>
+        <a href="contact.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Contact</a>
       </div>
-      <a href="contact.html" class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex">Visit Our Café</a>
+      <a href="contact.html"
+        class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex">Visit
+        Our Café</a>
       <details class="relative md:hidden">
-        <summary class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">Menu <span aria-hidden="true">☰</span></summary>
-        <div class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
-          <a href="index.html" aria-current="page" class="rounded-lg bg-white/10 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a>
-          <a href="menu.html" class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a>
-          <a href="gallery.html" class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a>
-          <a href="events.html" class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a>
-          <a href="contact.html" class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a>
+        <summary
+          class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
+          Menu <span aria-hidden="true">☰</span></summary>
+        <div
+          class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
+          <a href="index.html" aria-current="page"
+            class="rounded-lg bg-white/10 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a>
+          <a href="menu.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a>
+          <a href="gallery.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a>
+          <a href="events.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a>
+          <a href="contact.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a>
         </div>
       </details>
     </nav>
@@ -61,18 +107,31 @@
 
   <main id="main-content">
     <!-- HERO -->
-    <section aria-labelledby="hero-title" class="relative flex min-h-[650px] items-center overflow-hidden bg-[#251B16] pb-20 pt-36 text-white sm:min-h-[700px] sm:pb-24 sm:pt-40 lg:min-h-[730px]">
-      <img src="assets/images/Home Page/home-hero.jpg" alt="Coffee and an open book on a wooden table beside warm café bookshelves" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" width="1600" height="900">
+    <section aria-labelledby="hero-title"
+      class="relative flex min-h-[650px] items-center overflow-hidden bg-[#251B16] pb-20 pt-36 text-white sm:min-h-[700px] sm:pb-24 sm:pt-40 lg:min-h-[730px]">
+      <img src="assets/images/Home Page/home-hero.jpg"
+        alt="Coffee and an open book on a wooden table beside warm café bookshelves"
+        class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" width="1600" height="900">
       <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-transparent" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-transparent" aria-hidden="true">
+      </div>
       <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
         <div class="max-w-3xl">
-          <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#E6AC78] sm:text-sm sm:tracking-[0.25em]">Jaipur's Cozy Book Café</p>
-          <h1 id="hero-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.12] sm:text-6xl lg:text-7xl">Where Every Sip <span class="block text-[#E6AC78]">Tells a Story.</span></h1>
-          <p class="mt-6 max-w-xl text-base leading-8 text-white/90 sm:text-lg">Slow down, sip your favourite brew, and get lost in a good book. Your perfect little escape awaits at Chapter &amp; Chai.</p>
+          <p
+            class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#E6AC78] sm:text-sm sm:tracking-[0.25em]">
+            Jaipur's Cozy Book Café</p>
+          <h1 id="hero-title"
+            class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.12] sm:text-6xl lg:text-7xl">Where Every
+            Sip <span class="block text-[#E6AC78]">Tells a Story.</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-white/90 sm:text-lg">Slow down, sip your favourite brew, and
+            get lost in a good book. Your perfect little escape awaits at Chapter &amp; Chai.</p>
           <div class="mt-9 flex flex-wrap gap-3 sm:gap-4">
-            <a href="menu.html" class="inline-flex items-center justify-center rounded-full bg-[#B77946] px-6 py-3.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-7 sm:py-4">Explore Our Menu</a>
-            <a href="events.html" class="inline-flex items-center justify-center rounded-full border border-white/80 px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-white hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-7 sm:py-4">Discover Events</a>
+            <a href="menu.html"
+              class="inline-flex items-center justify-center rounded-full bg-[#B77946] px-6 py-3.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-7 sm:py-4">Explore
+              Our Menu</a>
+            <a href="events.html"
+              class="inline-flex items-center justify-center rounded-full border border-white/80 px-6 py-3.5 text-sm font-semibold transition-colors hover:bg-white hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-7 sm:py-4">Discover
+              Events</a>
           </div>
         </div>
       </div>
@@ -80,8 +139,10 @@
 
     <!-- HIGHLIGHTS STRIP: FLEXBOX -->
     <section aria-label="Café highlights" class="bg-[#B77946] text-[#251B16] dark:bg-[#B77946]">
-      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 py-5 text-center text-xs font-semibold uppercase tracking-widest sm:justify-between sm:px-6 lg:px-10">
-        <span>☕ Handcrafted Brews</span><span aria-hidden="true" class="hidden sm:inline">✦</span><span>📚 Stories on Every Shelf</span><span aria-hidden="true" class="hidden sm:inline">✦</span><span>♡ A Place to Unwind</span>
+      <div
+        class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 py-5 text-center text-xs font-semibold uppercase tracking-widest sm:justify-between sm:px-6 lg:px-10">
+        <span>☕ Handcrafted Brews</span><span aria-hidden="true" class="hidden sm:inline">✦</span><span>📚 Stories on
+          Every Shelf</span><span aria-hidden="true" class="hidden sm:inline">✦</span><span>♡ A Place to Unwind</span>
       </div>
     </section>
 
@@ -89,18 +150,29 @@
     <section aria-labelledby="story-title" class="py-16 sm:py-20 lg:py-24">
       <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
         <div class="relative">
-          <img src="assets/images/Home Page/home-about.jpeg" alt="Warmly lit book café seating area with shelves of books" loading="lazy" decoding="async" width="850" height="1000" class="h-[320px] w-full rounded-[2rem] object-cover shadow-xl sm:h-[450px] lg:h-[520px]">
-          <div class="absolute -bottom-5 right-4 rounded-2xl bg-[#B77946] px-5 py-4 text-center text-[#251B16] shadow-lg sm:right-[-14px]" aria-label="Coffee, books and community">
+          <img src="assets/images/Home Page/home-about.jpeg"
+            alt="Warmly lit book café seating area with shelves of books" loading="lazy" decoding="async" width="850"
+            height="1000" class="h-[320px] w-full rounded-[2rem] object-cover shadow-xl sm:h-[450px] lg:h-[520px]">
+          <div
+            class="absolute -bottom-5 right-4 rounded-2xl bg-[#B77946] px-5 py-4 text-center text-[#251B16] shadow-lg sm:right-[-14px]"
+            aria-label="Coffee, books and community">
             <p class="font-['Playfair_Display'] text-xl font-bold">Coffee &amp; Chapters</p>
             <p class="mt-1 text-xs font-semibold uppercase tracking-wider">Made to be shared</p>
           </div>
         </div>
         <div class="pt-5 lg:pt-0">
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">Our Story</p>
-          <h2 id="story-title" class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">More Than a Café. <span class="text-[#99602F] dark:text-[#E6AC78]">A Little Escape.</span></h2>
-          <p class="mt-6 leading-8 text-[#59483B] dark:text-[#E9DACA]">At Chapter &amp; Chai, we believe the best moments happen between a good book and a great cup of coffee. Our concept brings together the comforting aroma of fresh brews and the quiet joy of discovering a new story.</p>
-          <p class="mt-4 leading-8 text-[#59483B] dark:text-[#E9DACA]">Come for a quick chai, stay for a chapter, and leave with a conversation worth remembering.</p>
-          <a href="gallery.html" class="mt-7 inline-flex items-center gap-2 rounded-sm border-b-2 border-[#B77946] pb-1 font-semibold text-[#251B16] transition-colors hover:text-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#F5EBDD] dark:hover:text-[#E6AC78]">Take a Look Inside <span aria-hidden="true">→</span></a>
+          <h2 id="story-title"
+            class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">More Than a
+            Café. <span class="text-[#99602F] dark:text-[#E6AC78]">A Little Escape.</span></h2>
+          <p class="mt-6 leading-8 text-[#59483B] dark:text-[#E9DACA]">At Chapter &amp; Chai, we believe the best
+            moments happen between a good book and a great cup of coffee. Our concept brings together the comforting
+            aroma of fresh brews and the quiet joy of discovering a new story.</p>
+          <p class="mt-4 leading-8 text-[#59483B] dark:text-[#E9DACA]">Come for a quick chai, stay for a chapter, and
+            leave with a conversation worth remembering.</p>
+          <a href="gallery.html"
+            class="mt-7 inline-flex items-center gap-2 rounded-sm border-b-2 border-[#B77946] pb-1 font-semibold text-[#251B16] transition-colors hover:text-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#F5EBDD] dark:hover:text-[#E6AC78]">Take
+            a Look Inside <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -110,24 +182,52 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-5">
           <div class="max-w-2xl">
-            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">From Our Menu</p>
-            <h2 id="favourites-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Sip, Savour, Repeat.</h2>
-            <p class="mt-4 leading-7 text-[#59483B] dark:text-[#E9DACA]">A few favourites to pair with your next great read.</p>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">From Our
+              Menu</p>
+            <h2 id="favourites-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">
+              Sip, Savour, Repeat.</h2>
+            <p class="mt-4 leading-7 text-[#59483B] dark:text-[#E9DACA]">A few favourites to pair with your next great
+              read.</p>
           </div>
-          <a href="menu.html" class="rounded-full border border-[#251B16] px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#251B16] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:border-[#F5EBDD] dark:hover:bg-[#F5EBDD] dark:hover:text-[#251B16]">View Full Menu <span aria-hidden="true">→</span></a>
+          <a href="menu.html"
+            class="rounded-full border border-[#251B16] px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#251B16] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:border-[#F5EBDD] dark:hover:bg-[#F5EBDD] dark:hover:text-[#251B16]">View
+            Full Menu <span aria-hidden="true">→</span></a>
         </div>
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="overflow-hidden rounded-3xl bg-[#FFF9F1] shadow-sm transition-transform hover:-translate-y-1 dark:bg-[#463329]">
-            <img src="assets/images/Home Page/signature-coffee.jpeg" alt="A cup of latte with delicate coffee art" loading="lazy" decoding="async" width="750" height="650" class="h-60 w-full object-cover">
-            <div class="p-6"><p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#99602F] dark:text-[#E6AC78]">Coffee</p><h3 class="font-['Playfair_Display'] text-2xl font-semibold">Signature Latte</h3><p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Silky, comforting and crafted for slow afternoons.</p></div>
+          <article
+            class="overflow-hidden rounded-3xl bg-[#FFF9F1] shadow-sm transition-transform hover:-translate-y-1 dark:bg-[#463329]">
+            <img src="assets/images/Home Page/signature-coffee.jpeg" alt="A cup of latte with delicate coffee art"
+              loading="lazy" decoding="async" width="750" height="650" class="h-60 w-full object-cover">
+            <div class="p-6">
+              <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#99602F] dark:text-[#E6AC78]">Coffee</p>
+              <h3 class="font-['Playfair_Display'] text-2xl font-semibold">Signature Latte</h3>
+              <p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Silky, comforting and crafted for slow
+                afternoons.</p>
+            </div>
           </article>
-          <article class="overflow-hidden rounded-3xl bg-[#FFF9F1] shadow-sm transition-transform hover:-translate-y-1 dark:bg-[#463329]">
-            <img src="assets/images/Menu Page/cappuccino.jpeg" alt="Fresh cappuccino served with a soft layer of milk foam" loading="lazy" decoding="async" width="750" height="650" class="h-60 w-full object-cover">
-            <div class="p-6"><p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#99602F] dark:text-[#E6AC78]">Coffee</p><h3 class="font-['Playfair_Display'] text-2xl font-semibold">Classic Cappuccino</h3><p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">A bold espresso balanced with creamy foam.</p></div>
+          <article
+            class="overflow-hidden rounded-3xl bg-[#FFF9F1] shadow-sm transition-transform hover:-translate-y-1 dark:bg-[#463329]">
+            <img src="assets/images/Menu Page/cappuccino.jpeg"
+              alt="Fresh cappuccino served with a soft layer of milk foam" loading="lazy" decoding="async" width="750"
+              height="650" class="h-60 w-full object-cover">
+            <div class="p-6">
+              <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#99602F] dark:text-[#E6AC78]">Coffee</p>
+              <h3 class="font-['Playfair_Display'] text-2xl font-semibold">Classic Cappuccino</h3>
+              <p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">A bold espresso balanced with creamy foam.
+              </p>
+            </div>
           </article>
-          <article class="overflow-hidden rounded-3xl bg-[#FFF9F1] shadow-sm transition-transform hover:-translate-y-1 dark:bg-[#463329] sm:col-span-2 lg:col-span-1">
-            <img src="assets/images/Menu Page/cheesecake.jpeg" alt="Slice of cheesecake plated as a café dessert" loading="lazy" decoding="async" width="750" height="650" class="h-60 w-full object-cover">
-            <div class="p-6"><p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#99602F] dark:text-[#E6AC78]">Something Sweet</p><h3 class="font-['Playfair_Display'] text-2xl font-semibold">Creamy Cheesecake</h3><p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">The perfect sweet ending to a good chapter.</p></div>
+          <article
+            class="overflow-hidden rounded-3xl bg-[#FFF9F1] shadow-sm transition-transform hover:-translate-y-1 dark:bg-[#463329] sm:col-span-2 lg:col-span-1">
+            <img src="assets/images/Menu Page/cheesecake.jpeg" alt="Slice of cheesecake plated as a café dessert"
+              loading="lazy" decoding="async" width="750" height="650" class="h-60 w-full object-cover">
+            <div class="p-6">
+              <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#99602F] dark:text-[#E6AC78]">Something
+                Sweet</p>
+              <h3 class="font-['Playfair_Display'] text-2xl font-semibold">Creamy Cheesecake</h3>
+              <p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">The perfect sweet ending to a good chapter.
+              </p>
+            </div>
           </article>
         </div>
       </div>
@@ -137,13 +237,36 @@
     <section aria-labelledby="why-title" class="py-16 sm:py-20 lg:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div class="mx-auto max-w-2xl text-center">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Chapter &amp; Chai Experience</p>
-          <h2 id="why-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Why You'll Love It Here</h2>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Chapter
+            &amp; Chai Experience</p>
+          <h2 id="why-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Why You'll
+            Love It Here</h2>
         </div>
         <div class="mt-12 flex flex-col gap-6 md:flex-row">
-          <article class="flex-1 rounded-3xl border border-[#D8C4AC] p-7 text-center dark:border-[#665042]"><div aria-hidden="true" class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EADBC7] text-3xl dark:bg-[#463329]">☕</div><h3 class="font-['Playfair_Display'] text-2xl font-semibold">Thoughtful Brews</h3><p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Every cup is an invitation to slow down and savour the moment.</p></article>
-          <article class="flex-1 rounded-3xl border border-[#D8C4AC] p-7 text-center dark:border-[#665042]"><div aria-hidden="true" class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EADBC7] text-3xl dark:bg-[#463329]">📖</div><h3 class="font-['Playfair_Display'] text-2xl font-semibold">Cozy Reading Nooks</h3><p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Find a quiet corner, turn a page and feel right at home.</p></article>
-          <article class="flex-1 rounded-3xl border border-[#D8C4AC] p-7 text-center dark:border-[#665042]"><div aria-hidden="true" class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EADBC7] text-3xl dark:bg-[#463329]">✦</div><h3 class="font-['Playfair_Display'] text-2xl font-semibold">Bookish Community</h3><p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Meet fellow readers through imagined book clubs and creative gatherings.</p></article>
+          <article class="flex-1 rounded-3xl border border-[#D8C4AC] p-7 text-center dark:border-[#665042]">
+            <div aria-hidden="true"
+              class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EADBC7] text-3xl dark:bg-[#463329]">
+              ☕</div>
+            <h3 class="font-['Playfair_Display'] text-2xl font-semibold">Thoughtful Brews</h3>
+            <p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Every cup is an invitation to slow down and
+              savour the moment.</p>
+          </article>
+          <article class="flex-1 rounded-3xl border border-[#D8C4AC] p-7 text-center dark:border-[#665042]">
+            <div aria-hidden="true"
+              class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EADBC7] text-3xl dark:bg-[#463329]">
+              📖</div>
+            <h3 class="font-['Playfair_Display'] text-2xl font-semibold">Cozy Reading Nooks</h3>
+            <p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Find a quiet corner, turn a page and feel right
+              at home.</p>
+          </article>
+          <article class="flex-1 rounded-3xl border border-[#D8C4AC] p-7 text-center dark:border-[#665042]">
+            <div aria-hidden="true"
+              class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EADBC7] text-3xl dark:bg-[#463329]">
+              ✦</div>
+            <h3 class="font-['Playfair_Display'] text-2xl font-semibold">Bookish Community</h3>
+            <p class="mt-3 leading-7 text-[#59483B] dark:text-[#E9DACA]">Meet fellow readers through imagined book clubs
+              and creative gatherings.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -151,28 +274,77 @@
     <!-- READING / EVENTS FEATURE -->
     <section aria-labelledby="events-title" class="bg-[#EADBC7] py-16 dark:bg-[#32241D] sm:py-20">
       <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
-        <div class="lg:order-2"><img src="assets/images/Home Page/reading-corner.jpeg" alt="A welcoming reading spot for enjoying books and coffee" loading="lazy" decoding="async" width="850" height="850" class="h-[320px] w-full rounded-[2rem] object-cover shadow-lg sm:h-[420px]"></div>
-        <div class="lg:order-1"><p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">Beyond the Coffee Cup</p><h2 id="events-title" class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">Good Books. <span class="text-[#99602F] dark:text-[#E6AC78]">Great Company.</span></h2><p class="mt-6 leading-8 text-[#59483B] dark:text-[#E9DACA]">From relaxed reading circles to poetry evenings, Chapter &amp; Chai is imagined as a home for curious minds and creative conversations.</p><a href="events.html" class="mt-8 inline-flex rounded-full bg-[#251B16] px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]">Explore Our Events <span aria-hidden="true" class="ml-2">→</span></a></div>
+        <div class="lg:order-2"><img src="assets/images/Home Page/reading-corner.jpeg"
+            alt="A welcoming reading spot for enjoying books and coffee" loading="lazy" decoding="async" width="850"
+            height="850" class="h-[320px] w-full rounded-[2rem] object-cover shadow-lg sm:h-[420px]"></div>
+        <div class="lg:order-1">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">Beyond the
+            Coffee Cup</p>
+          <h2 id="events-title"
+            class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">Good Books.
+            <span class="text-[#99602F] dark:text-[#E6AC78]">Great Company.</span>
+          </h2>
+          <p class="mt-6 leading-8 text-[#59483B] dark:text-[#E9DACA]">From relaxed reading circles to poetry evenings,
+            Chapter &amp; Chai is imagined as a home for curious minds and creative conversations.</p><a
+            href="events.html"
+            class="mt-8 inline-flex rounded-full bg-[#251B16] px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]">Explore
+            Our Events <span aria-hidden="true" class="ml-2">→</span></a>
+        </div>
       </div>
     </section>
 
     <!-- TESTIMONIALS: illustrative, not actual customer reviews -->
     <section aria-labelledby="reviews-title" class="py-16 sm:py-20 lg:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div class="text-center"><p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Feeling We Hope To Create</p><h2 id="reviews-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Words Over Coffee</h2><p class="mt-4 text-sm text-[#59483B] dark:text-[#E9DACA]">Illustrative testimonials for this fictional café concept — not actual customer reviews.</p></div>
+        <div class="text-center">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Feeling
+            We Hope To Create</p>
+          <h2 id="reviews-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Words
+            Over Coffee</h2>
+          <p class="mt-4 text-sm text-[#59483B] dark:text-[#E9DACA]">Illustrative testimonials for this fictional café
+            concept — not actual customer reviews.</p>
+        </div>
         <div class="mt-10 grid gap-6 md:grid-cols-3">
-          <article class="rounded-3xl bg-[#FFF9F1] p-7 shadow-sm dark:bg-[#463329]"><div aria-hidden="true" class="mb-4 text-2xl tracking-widest text-[#B77946]">★★★★★</div><blockquote class="leading-8 text-[#59483B] dark:text-[#E9DACA]">“The kind of place where one chapter quietly turns into five.”</blockquote><p class="mt-5 border-t border-[#D8C4AC] pt-4 text-sm font-semibold dark:border-[#665042]">Sample reader experience</p></article>
-          <article class="rounded-3xl bg-[#FFF9F1] p-7 shadow-sm dark:bg-[#463329]"><div aria-hidden="true" class="mb-4 text-2xl tracking-widest text-[#B77946]">★★★★★</div><blockquote class="leading-8 text-[#59483B] dark:text-[#E9DACA]">“A warm cup, a quiet corner, and a lovely afternoon.”</blockquote><p class="mt-5 border-t border-[#D8C4AC] pt-4 text-sm font-semibold dark:border-[#665042]">Sample café experience</p></article>
-          <article class="rounded-3xl bg-[#FFF9F1] p-7 shadow-sm dark:bg-[#463329]"><div aria-hidden="true" class="mb-4 text-2xl tracking-widest text-[#B77946]">★★★★★</div><blockquote class="leading-8 text-[#59483B] dark:text-[#E9DACA]">“Where conversations begin with coffee and end with stories.”</blockquote><p class="mt-5 border-t border-[#D8C4AC] pt-4 text-sm font-semibold dark:border-[#665042]">Sample community experience</p></article>
+          <article class="rounded-3xl bg-[#FFF9F1] p-7 shadow-sm dark:bg-[#463329]">
+            <div aria-hidden="true" class="mb-4 text-2xl tracking-widest text-[#B77946]">★★★★★</div>
+            <blockquote class="leading-8 text-[#59483B] dark:text-[#E9DACA]">“The kind of place where one chapter
+              quietly turns into five.”</blockquote>
+            <p class="mt-5 border-t border-[#D8C4AC] pt-4 text-sm font-semibold dark:border-[#665042]">Sample reader
+              experience</p>
+          </article>
+          <article class="rounded-3xl bg-[#FFF9F1] p-7 shadow-sm dark:bg-[#463329]">
+            <div aria-hidden="true" class="mb-4 text-2xl tracking-widest text-[#B77946]">★★★★★</div>
+            <blockquote class="leading-8 text-[#59483B] dark:text-[#E9DACA]">“A warm cup, a quiet corner, and a lovely
+              afternoon.”</blockquote>
+            <p class="mt-5 border-t border-[#D8C4AC] pt-4 text-sm font-semibold dark:border-[#665042]">Sample café
+              experience</p>
+          </article>
+          <article class="rounded-3xl bg-[#FFF9F1] p-7 shadow-sm dark:bg-[#463329]">
+            <div aria-hidden="true" class="mb-4 text-2xl tracking-widest text-[#B77946]">★★★★★</div>
+            <blockquote class="leading-8 text-[#59483B] dark:text-[#E9DACA]">“Where conversations begin with coffee and
+              end with stories.”</blockquote>
+            <p class="mt-5 border-t border-[#D8C4AC] pt-4 text-sm font-semibold dark:border-[#665042]">Sample community
+              experience</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- VISIT / HOURS / CTA -->
     <section aria-labelledby="visit-title" class="bg-[#251B16] py-16 text-[#F5EBDD] sm:py-20">
-      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
-        <div class="max-w-2xl"><p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#E6AC78]">Your Next Chapter Awaits</p><h2 id="visit-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Come In. Get Comfortable. Stay a While.</h2><p class="mt-5 leading-8 text-[#E9DACA]">An imagined café in Jaipur, Rajasthan, built as a Milestone 1 web design concept.</p><p class="mt-3 text-sm text-[#E9DACA]">Illustrative opening hours: Monday–Sunday, 9:00 AM – 10:00 PM</p></div>
-        <a href="contact.html" class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B77946] px-8 py-4 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Find Us &amp; Get in Touch <span aria-hidden="true" class="ml-2">→</span></a>
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
+        <div class="max-w-2xl">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#E6AC78]">Your Next Chapter Awaits</p>
+          <h2 id="visit-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl">Come In.
+            Get Comfortable. Stay a While.</h2>
+          <p class="mt-5 leading-8 text-[#E9DACA]">An imagined café in Jaipur, Rajasthan, built as a Milestone 1 web
+            design concept.</p>
+          <p class="mt-3 text-sm text-[#E9DACA]">Illustrative opening hours: Monday–Sunday, 9:00 AM – 10:00 PM</p>
+        </div>
+        <a href="contact.html"
+          class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B77946] px-8 py-4 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Find
+          Us &amp; Get in Touch <span aria-hidden="true" class="ml-2">→</span></a>
       </div>
     </section>
   </main>
@@ -180,11 +352,54 @@
   <!-- FOOTER -->
   <footer class="bg-[#1B1410] text-[#F5EBDD]">
     <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-      <div><a href="index.html" class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a><p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good conversations.</p></div>
-      <div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2><ul class="mt-5 space-y-3"><li><a href="index.html" class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a></li><li><a href="menu.html" class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a></li><li><a href="gallery.html" class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a></li><li><a href="events.html" class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a></li><li><a href="contact.html" class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a></li></ul></div>
-      <div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2><p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br>Fictional business concept</p><p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a href="contact.html" class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Contact us <span aria-hidden="true">→</span></a></div>
+      <div><a href="index.html"
+          class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Chapter
+          <span class="text-[#E6AC78]">&amp;</span> Chai.</a>
+        <p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good
+          conversations.</p>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2>
+        <ul class="mt-5 space-y-3">
+          <li><a href="index.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a>
+          </li>
+          <li><a href="menu.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a>
+          </li>
+          <li><a href="gallery.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a>
+          </li>
+          <li><a href="events.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a>
+          </li>
+          <li><a href="contact.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2>
+        <p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br>Fictional business concept</p>
+        <p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a href="contact.html"
+          class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Contact
+          us <span aria-hidden="true">→</span></a>
+      </div>
     </div>
-    <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6"><p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p></div>
+    <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6">
+      <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
+    </div>
   </footer>
+  <script>
+    // Keep the hero image visible behind the navbar until the page is scrolled.
+    (() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
+      updateHeader(); // Handles page refreshes and direct links to page sections.
+      window.addEventListener('scroll', updateHeader, { passive: true });
+    })();
+  </script>
 </body>
+
 </html>

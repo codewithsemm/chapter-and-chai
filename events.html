@@ -1,204 +1,411 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-pt-24">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Discover book clubs, poetry nights and creative workshops at Chapter &amp; Chai, a fictional book café concept in Jaipur." name="description"/>
-<meta content="#251B16" name="theme-color"/>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>Events | Chapter &amp; Chai — Jaipur Book Café</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta
+    content="Discover book clubs, poetry nights and creative workshops at Chapter &amp; Chai, a fictional book café concept in Jaipur."
+    name="description" />
+  <meta content="#251B16" name="theme-color" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Events | Chapter &amp; Chai — Jaipur Book Café</title>
   <!-- SEO and social sharing metadata -->
   <link rel="canonical" href="https://chapter-and-chai.vercel.app/events.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Chapter &amp; Chai">
   <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Events | Chapter &amp; Chai — Jaipur Book Café">
-  <meta property="og:description" content="Discover book clubs, poetry nights and creative workshops at Chapter &amp; Chai, a fictional book café concept in Jaipur.">
+  <meta property="og:description"
+    content="Discover book clubs, poetry nights and creative workshops at Chapter &amp; Chai, a fictional book café concept in Jaipur.">
   <meta property="og:url" content="https://chapter-and-chai.vercel.app/events.html">
   <meta property="og:image" content="https://chapter-and-chai.vercel.app/assets/images/Event%20Page/book-club.jpeg">
   <meta property="og:image:alt" content="Book club gathering at Chapter &amp; Chai">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Events | Chapter &amp; Chai — Jaipur Book Café">
-  <meta name="twitter:description" content="Discover book clubs, poetry nights and creative workshops at Chapter &amp; Chai, a fictional book café concept in Jaipur.">
+  <meta name="twitter:description"
+    content="Discover book clubs, poetry nights and creative workshops at Chapter &amp; Chai, a fictional book café concept in Jaipur.">
   <meta name="twitter:image" content="https://chapter-and-chai.vercel.app/assets/images/Event%20Page/book-club.jpeg">
   <!-- End SEO and social sharing metadata -->
-<!-- Tailwind Play CDN is used for this learning project. Production deployments should ideally use a compiled Tailwind build. -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-</head>
-<body class="min-w-0 bg-[#F5EBDD] font-['Inter'] text-[#251B16] antialiased dark:bg-[#251B16] dark:text-[#F5EBDD]">
-<a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]" href="#main-content">Skip to main content</a>
-<header class="absolute inset-x-0 top-0 z-30 text-[#F5EBDD]">
-<nav aria-label="Main navigation" class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
-<a aria-label="Chapter and Chai, home" class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl" href="index.html">
-        Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span class="text-[#E6AC78]">.</span>
-</a>
-<div class="hidden items-center gap-6 md:flex lg:gap-8">
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="index.html">Home</a>
-<a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a>
-<a aria-current="page" class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] border-b-2 border-[#E6AC78] pb-1 font-semibold" href="events.html">Events</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a>
-</div>
-<a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex" href="contact.html">Visit Our Café</a>
-<details class="relative md:hidden">
-<summary class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">Menu <span aria-hidden="true">☰</span></summary>
-<div class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="index.html">Home</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a>
-<a aria-current="page" class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78] bg-white/10 font-semibold" href="events.html">Events</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a>
-</div>
-</details>
-</nav>
-</header>
+  <!-- Tailwind Play CDN is used for this learning project. Production deployments should ideally use a compiled Tailwind build. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Navbar stays transparent over the hero, then gains contrast when scrolling. -->
+  <style>
+    .site-header {
+      background-color: transparent;
+      transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
+    }
 
-<main id="main-content">
-  <!-- Hero and section links share one photographic background. -->
-  <div class="relative isolate overflow-hidden bg-[#251B16] text-white">
-    <img src="assets/images/Event Page/book-club.jpeg" alt="Books arranged for a welcoming community reading session" width="1600" height="1000" fetchpriority="high" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
-    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50"></div>
-    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-transparent to-black/75"></div>
-    <section aria-labelledby="events-title" class="relative z-10 flex min-h-[520px] items-center pb-12 pt-36 sm:min-h-[600px] sm:pb-16 sm:pt-40">
-      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#E6AC78] sm:text-sm">Where Stories Bring Us Together</p>
-        <h1 id="events-title" class="max-w-4xl font-['Playfair_Display'] text-4xl font-semibold leading-[1.12] sm:text-6xl lg:text-7xl">Good Stories.<span class="block text-[#E6AC78]">Better Together.</span></h1>
-        <p class="mt-6 max-w-xl text-base leading-8 text-white/90 sm:text-lg">From turning pages with fellow readers to finding your voice on an open mic, there is always a seat for you at our table.</p>
-        <a href="#experiences" class="mt-8 inline-flex items-center justify-center rounded-full bg-[#B77946] px-7 py-3.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Discover Our Events <span aria-hidden="true" class="ml-2">↓</span></a>
+    .site-header.is-scrolled {
+      background-color: rgba(37, 27, 22, 0.95);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-w-0 bg-[#F5EBDD] font-['Inter'] text-[#251B16] antialiased dark:bg-[#251B16] dark:text-[#F5EBDD]">
+  <a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]"
+    href="#main-content">Skip to main content</a>
+  <header class="site-header fixed inset-x-0 top-0 z-40 text-[#F5EBDD]">
+    <nav aria-label="Main navigation"
+      class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
+      <a aria-label="Chapter and Chai, home"
+        class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl"
+        href="index.html">
+        Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span class="text-[#E6AC78]">.</span>
+      </a>
+      <div class="hidden items-center gap-6 md:flex lg:gap-8">
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="index.html">Home</a>
+        <a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="menu.html">Menu</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="gallery.html">Gallery</a>
+        <a aria-current="page"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] border-b-2 border-[#E6AC78] pb-1 font-semibold"
+          href="events.html">Events</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="contact.html">Contact</a>
+      </div>
+      <a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex"
+        href="contact.html">Visit Our Café</a>
+      <details class="relative md:hidden">
+        <summary
+          class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
+          Menu <span aria-hidden="true">☰</span></summary>
+        <div
+          class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="index.html">Home</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="menu.html">Menu</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="gallery.html">Gallery</a>
+          <a aria-current="page"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78] bg-white/10 font-semibold"
+            href="events.html">Events</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="contact.html">Contact</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero and section links share one photographic background. -->
+    <div class="relative isolate overflow-hidden bg-[#251B16] text-white">
+      <img src="assets/images/Event Page/book-club.jpeg" alt="Books arranged for a welcoming community reading session"
+        width="1600" height="1000" fetchpriority="high"
+        class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50">
+      </div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-transparent to-black/75">
+      </div>
+      <section aria-labelledby="events-title"
+        class="relative z-10 flex min-h-[520px] items-center pb-12 pt-36 sm:min-h-[600px] sm:pb-16 sm:pt-40">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#E6AC78] sm:text-sm">Where Stories Bring Us
+            Together</p>
+          <h1 id="events-title"
+            class="max-w-4xl font-['Playfair_Display'] text-4xl font-semibold leading-[1.12] sm:text-6xl lg:text-7xl">
+            Good Stories.<span class="block text-[#E6AC78]">Better Together.</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-white/90 sm:text-lg">From turning pages with fellow readers
+            to finding your voice on an open mic, there is always a seat for you at our table.</p>
+          <a href="#experiences"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#B77946] px-7 py-3.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Discover
+            Our Events <span aria-hidden="true" class="ml-2">↓</span></a>
+        </div>
+      </section>
+      <nav aria-label="Events page sections" class="relative z-10 border-t border-white/20">
+        <div
+          class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 pb-9 pt-6 sm:gap-5 sm:px-6 sm:pb-11 lg:px-10">
+          <a href="#experiences"
+            class="rounded-full border border-[#B77946] bg-[#B77946]/90 px-5 py-2.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Our
+            Gatherings</a>
+          <a href="#weekly-rhythm"
+            class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Weekly
+            Rhythm</a>
+          <a href="#join-us"
+            class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Join
+            the Community</a>
+        </div>
+      </nav>
+    </div>
+
+    <section aria-label="Concept notice"
+      class="border-b border-[#D8C4AC] bg-[#FFF9F1] py-5 dark:border-[#60483A] dark:bg-[#3B2B23]">
+      <p
+        class="mx-auto max-w-7xl px-4 text-center text-sm leading-6 text-[#59483B] dark:text-[#E9DACA] sm:px-6 lg:px-10">
+        ✦ These are sample events for our fictional Jaipur book café concept; dates and reservations are not currently
+        offered. ✦</p>
+    </section>
+
+    <section id="experiences" aria-labelledby="experiences-title"
+      class="scroll-mt-8 bg-[#F5EBDD] py-16 dark:bg-[#251B16] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div class="mb-11 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#A56B3D] dark:text-[#E6AC78]">A Little
+              Something for Everyone</p>
+            <h2 id="experiences-title"
+              class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-5xl">Gather. Create. <span
+                class="text-[#A56B3D] dark:text-[#E6AC78]">Belong.</span></h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-[#645246] dark:text-[#E9DACA] sm:text-base">Three ways to slow down,
+            meet kindred spirits and leave with a story worth sharing.</p>
+        </div>
+        <!-- CSS Grid: event cards -->
+        <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#594437] dark:bg-[#35271F]">
+            <div class="relative overflow-hidden">
+              <img src="assets/images/Event Page/book-club.jpeg"
+                alt="Books and reading materials ready for a book club discussion" width="1000" height="720"
+                loading="lazy"
+                class="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-64" />
+              <span
+                class="absolute bottom-4 left-4 rounded-full bg-[#F5EBDD] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#251B16]">For
+                Book Lovers</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#A56B3D] dark:text-[#E6AC78]">Read
+                &amp; Reflect</p>
+              <h3 class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">The Book Club</h3>
+              <p class="mt-4 flex-1 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">One book, many perspectives.
+                Share your favorite passages, discover new authors and connect over a warm cup of chai.</p>
+              <div class="mt-6 border-t border-[#E2D2BF] pt-5 dark:border-[#594437]">
+                <p class="text-sm font-semibold">Sample session: Saturday afternoons</p>
+                <a href="contact.html"
+                  class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#89512B] underline decoration-[#B77946] underline-offset-4 transition-colors hover:text-[#5E361D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#E6AC78] dark:hover:text-white">Ask
+                  about book club <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#594437] dark:bg-[#35271F]">
+            <div class="relative overflow-hidden">
+              <img src="assets/images/Event Page/poetry-night.jpeg"
+                alt="Warmly lit creative setting for an intimate poetry evening" width="1000" height="720"
+                loading="lazy"
+                class="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-64" />
+              <span
+                class="absolute bottom-4 left-4 rounded-full bg-[#F5EBDD] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#251B16]">For
+                Storytellers</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#A56B3D] dark:text-[#E6AC78]">Speak
+                &amp; Listen</p>
+              <h3 class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">Poetry &amp; Open Mic</h3>
+              <p class="mt-4 flex-1 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">A cozy stage for original
+                poems, heartfelt words and spontaneous stories. Come to perform or simply listen.</p>
+              <div class="mt-6 border-t border-[#E2D2BF] pt-5 dark:border-[#594437]">
+                <p class="text-sm font-semibold">Sample session: Friday evenings</p>
+                <a href="contact.html"
+                  class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#89512B] underline decoration-[#B77946] underline-offset-4 transition-colors hover:text-[#5E361D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#E6AC78] dark:hover:text-white">Ask
+                  about open mic <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#594437] dark:bg-[#35271F] md:col-span-2 lg:col-span-1">
+            <div class="relative overflow-hidden">
+              <img src="assets/images/Event Page/writing-workshop.jpeg"
+                alt="Notebook and writing supplies set out for a creative writing workshop" width="1000" height="720"
+                loading="lazy"
+                class="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-64" />
+              <span
+                class="absolute bottom-4 left-4 rounded-full bg-[#F5EBDD] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#251B16]">For
+                Curious Minds</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#A56B3D] dark:text-[#E6AC78]">Write
+                &amp; Imagine</p>
+              <h3 class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">Writing Workshop</h3>
+              <p class="mt-4 flex-1 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Let your ideas find their way
+                onto the page. Explore creative prompts, write together and celebrate every voice.</p>
+              <div class="mt-6 border-t border-[#E2D2BF] pt-5 dark:border-[#594437]">
+                <p class="text-sm font-semibold">Sample session: Sunday mornings</p>
+                <a href="contact.html"
+                  class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#89512B] underline decoration-[#B77946] underline-offset-4 transition-colors hover:text-[#5E361D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#E6AC78] dark:hover:text-white">Ask
+                  about workshops <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-    <nav aria-label="Events page sections" class="relative z-10 border-t border-white/20">
-      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 pb-9 pt-6 sm:gap-5 sm:px-6 sm:pb-11 lg:px-10">
-        <a href="#experiences" class="rounded-full border border-[#B77946] bg-[#B77946]/90 px-5 py-2.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Our Gatherings</a>
-        <a href="#weekly-rhythm" class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Weekly Rhythm</a>
-        <a href="#join-us" class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Join the Community</a>
+
+    <section id="weekly-rhythm" aria-labelledby="rhythm-title"
+      class="scroll-mt-8 bg-[#E9DACA] py-16 dark:bg-[#30231D] sm:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
+        <div>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#89512B] dark:text-[#E6AC78]">A Week at
+            Chapter &amp; Chai</p>
+          <h2 id="rhythm-title"
+            class="max-w-xl font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-5xl">Something to
+            <span class="text-[#89512B] dark:text-[#E6AC78]">Look Forward To.</span>
+          </h2>
+          <p class="mt-6 max-w-lg text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">Picture an easy rhythm of
+            books, creativity and community. Here is how a sample week could unfold in our café concept.</p>
+          <a href="contact.html"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#251B16] px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#5C3D2B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]">Get
+            in Touch <span aria-hidden="true" class="ml-2">↗</span></a>
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl border border-[#D7C0A7] bg-[#FFF9F1] shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]">
+          <div class="border-b border-[#E2D2BF] px-6 py-5 dark:border-[#60483A] sm:px-8">
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#89512B] dark:text-[#E6AC78]">Illustrative
+              Weekly Schedule</p>
+          </div>
+          <ul class="divide-y divide-[#E2D2BF] dark:divide-[#60483A]">
+            <li class="flex flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5 sm:px-8">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#89512B] dark:text-[#E6AC78]">Friday ·
+                  Evening</p>
+                <p class="mt-1 font-['Playfair_Display'] text-xl font-semibold">Poetry &amp; Open Mic</p>
+              </div><span
+                class="self-start rounded-full bg-[#F0E2D0] px-3 py-1.5 text-xs font-semibold text-[#59483B] dark:bg-[#594437] dark:text-[#F5EBDD]">Words
+                &amp; music</span>
+            </li>
+            <li class="flex flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5 sm:px-8">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#89512B] dark:text-[#E6AC78]">Saturday ·
+                  Afternoon</p>
+                <p class="mt-1 font-['Playfair_Display'] text-xl font-semibold">The Book Club</p>
+              </div><span
+                class="self-start rounded-full bg-[#F0E2D0] px-3 py-1.5 text-xs font-semibold text-[#59483B] dark:bg-[#594437] dark:text-[#F5EBDD]">Read
+                &amp; connect</span>
+            </li>
+            <li class="flex flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5 sm:px-8">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#89512B] dark:text-[#E6AC78]">Sunday ·
+                  Morning</p>
+                <p class="mt-1 font-['Playfair_Display'] text-xl font-semibold">Writing Workshop</p>
+              </div><span
+                class="self-start rounded-full bg-[#F0E2D0] px-3 py-1.5 text-xs font-semibold text-[#59483B] dark:bg-[#594437] dark:text-[#F5EBDD]">Create
+                &amp; share</span>
+            </li>
+          </ul>
+          <p
+            class="border-t border-[#E2D2BF] px-6 py-4 text-xs leading-6 text-[#645246] dark:border-[#60483A] dark:text-[#E9DACA] sm:px-8">
+            Sample schedule only. No confirmed events, tickets or booking service.</p>
+        </div>
       </div>
-    </nav>
-  </div>
+    </section>
 
-  <section aria-label="Concept notice" class="border-b border-[#D8C4AC] bg-[#FFF9F1] py-5 dark:border-[#60483A] dark:bg-[#3B2B23]">
-    <p class="mx-auto max-w-7xl px-4 text-center text-sm leading-6 text-[#59483B] dark:text-[#E9DACA] sm:px-6 lg:px-10">✦ These are sample events for our fictional Jaipur book café concept; dates and reservations are not currently offered. ✦</p>
-  </section>
+    <section aria-labelledby="moments-title" class="bg-[#F5EBDD] py-16 dark:bg-[#251B16] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div class="mx-auto mb-10 max-w-2xl text-center">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#89512B] dark:text-[#E6AC78]">The Little
+            Things</p>
+          <h2 id="moments-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-5xl">More Than an <span
+              class="text-[#89512B] dark:text-[#E6AC78]">Event.</span></h2>
+          <p class="mt-5 text-sm leading-7 text-[#645246] dark:text-[#E9DACA] sm:text-base">It is about the
+            conversations that continue long after the last sip.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] p-7 dark:border-[#594437] dark:bg-[#35271F]">
+            <span aria-hidden="true" class="text-3xl">📖</span>
+            <h3 class="mt-5 font-['Playfair_Display'] text-2xl font-semibold">Discover New Ideas</h3>
+            <p class="mt-3 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Find your next favorite author, poem or
+              unexpected perspective.</p>
+          </article>
+          <article class="rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] p-7 dark:border-[#594437] dark:bg-[#35271F]">
+            <span aria-hidden="true" class="text-3xl">☕</span>
+            <h3 class="mt-5 font-['Playfair_Display'] text-2xl font-semibold">Feel Right at Home</h3>
+            <p class="mt-3 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Come as you are, pull up a chair and
+              enjoy the warmth of good company.</p>
+          </article>
+          <article class="rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] p-7 dark:border-[#594437] dark:bg-[#35271F]">
+            <span aria-hidden="true" class="text-3xl">✍️</span>
+            <h3 class="mt-5 font-['Playfair_Display'] text-2xl font-semibold">Make Something Yours</h3>
+            <p class="mt-3 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Bring your curiosity and leave with a
+              fresh spark of inspiration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="experiences" aria-labelledby="experiences-title" class="scroll-mt-8 bg-[#F5EBDD] py-16 dark:bg-[#251B16] sm:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-      <div class="mb-11 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+    <section id="join-us" aria-labelledby="join-title" class="scroll-mt-8 bg-[#251B16] py-16 text-[#F5EBDD] sm:py-24">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-9 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
         <div class="max-w-2xl">
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#A56B3D] dark:text-[#E6AC78]">A Little Something for Everyone</p>
-          <h2 id="experiences-title" class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-5xl">Gather. Create. <span class="text-[#A56B3D] dark:text-[#E6AC78]">Belong.</span></h2>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#E6AC78]">Your Next Chapter Starts Here</p>
+          <h2 id="join-title" class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-5xl">Every
+            Great Story <span class="text-[#E6AC78]">Needs Company.</span></h2>
+          <p class="mt-5 max-w-xl text-base leading-8 text-[#E9DACA]">Have an idea for a gathering or a question about
+            our café concept? We would love to hear from you.</p>
         </div>
-        <p class="max-w-md text-sm leading-7 text-[#645246] dark:text-[#E9DACA] sm:text-base">Three ways to slow down, meet kindred spirits and leave with a story worth sharing.</p>
+        <a href="contact.html"
+          class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B77946] px-8 py-4 text-sm font-bold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Contact
+          Chapter &amp; Chai <span aria-hidden="true" class="ml-2">↗</span></a>
       </div>
-      <!-- CSS Grid: event cards -->
-      <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-        <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#594437] dark:bg-[#35271F]">
-          <div class="relative overflow-hidden">
-            <img src="assets/images/Event Page/book-club.jpeg" alt="Books and reading materials ready for a book club discussion" width="1000" height="720" loading="lazy" class="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-64" />
-            <span class="absolute bottom-4 left-4 rounded-full bg-[#F5EBDD] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#251B16]">For Book Lovers</span>
-          </div>
-          <div class="flex flex-1 flex-col p-6 sm:p-7">
-            <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#A56B3D] dark:text-[#E6AC78]">Read &amp; Reflect</p>
-            <h3 class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">The Book Club</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">One book, many perspectives. Share your favorite passages, discover new authors and connect over a warm cup of chai.</p>
-            <div class="mt-6 border-t border-[#E2D2BF] pt-5 dark:border-[#594437]">
-              <p class="text-sm font-semibold">Sample session: Saturday afternoons</p>
-              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#89512B] underline decoration-[#B77946] underline-offset-4 transition-colors hover:text-[#5E361D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#E6AC78] dark:hover:text-white">Ask about book club <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#594437] dark:bg-[#35271F]">
-          <div class="relative overflow-hidden">
-            <img src="assets/images/Event Page/poetry-night.jpeg" alt="Warmly lit creative setting for an intimate poetry evening" width="1000" height="720" loading="lazy" class="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-64" />
-            <span class="absolute bottom-4 left-4 rounded-full bg-[#F5EBDD] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#251B16]">For Storytellers</span>
-          </div>
-          <div class="flex flex-1 flex-col p-6 sm:p-7">
-            <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#A56B3D] dark:text-[#E6AC78]">Speak &amp; Listen</p>
-            <h3 class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">Poetry &amp; Open Mic</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">A cozy stage for original poems, heartfelt words and spontaneous stories. Come to perform or simply listen.</p>
-            <div class="mt-6 border-t border-[#E2D2BF] pt-5 dark:border-[#594437]">
-              <p class="text-sm font-semibold">Sample session: Friday evenings</p>
-              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#89512B] underline decoration-[#B77946] underline-offset-4 transition-colors hover:text-[#5E361D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#E6AC78] dark:hover:text-white">Ask about open mic <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#594437] dark:bg-[#35271F] md:col-span-2 lg:col-span-1">
-          <div class="relative overflow-hidden">
-            <img src="assets/images/Event Page/writing-workshop.jpeg" alt="Notebook and writing supplies set out for a creative writing workshop" width="1000" height="720" loading="lazy" class="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-64" />
-            <span class="absolute bottom-4 left-4 rounded-full bg-[#F5EBDD] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#251B16]">For Curious Minds</span>
-          </div>
-          <div class="flex flex-1 flex-col p-6 sm:p-7">
-            <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#A56B3D] dark:text-[#E6AC78]">Write &amp; Imagine</p>
-            <h3 class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">Writing Workshop</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Let your ideas find their way onto the page. Explore creative prompts, write together and celebrate every voice.</p>
-            <div class="mt-6 border-t border-[#E2D2BF] pt-5 dark:border-[#594437]">
-              <p class="text-sm font-semibold">Sample session: Sunday mornings</p>
-              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#89512B] underline decoration-[#B77946] underline-offset-4 transition-colors hover:text-[#5E361D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:text-[#E6AC78] dark:hover:text-white">Ask about workshops <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section id="weekly-rhythm" aria-labelledby="rhythm-title" class="scroll-mt-8 bg-[#E9DACA] py-16 dark:bg-[#30231D] sm:py-24">
-    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
+  <footer class="bg-[#1B1410] text-[#F5EBDD]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
+      <div><a
+          class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="index.html">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a>
+        <p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good
+          conversations.</p>
+      </div>
       <div>
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#89512B] dark:text-[#E6AC78]">A Week at Chapter &amp; Chai</p>
-        <h2 id="rhythm-title" class="max-w-xl font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-5xl">Something to <span class="text-[#89512B] dark:text-[#E6AC78]">Look Forward To.</span></h2>
-        <p class="mt-6 max-w-lg text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">Picture an easy rhythm of books, creativity and community. Here is how a sample week could unfold in our café concept.</p>
-        <a href="contact.html" class="mt-8 inline-flex items-center justify-center rounded-full bg-[#251B16] px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#5C3D2B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]">Get in Touch <span aria-hidden="true" class="ml-2">↗</span></a>
-      </div>
-      <div class="overflow-hidden rounded-2xl border border-[#D7C0A7] bg-[#FFF9F1] shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]">
-        <div class="border-b border-[#E2D2BF] px-6 py-5 dark:border-[#60483A] sm:px-8">
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#89512B] dark:text-[#E6AC78]">Illustrative Weekly Schedule</p>
-        </div>
-        <ul class="divide-y divide-[#E2D2BF] dark:divide-[#60483A]">
-          <li class="flex flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5 sm:px-8"><div><p class="text-xs font-bold uppercase tracking-widest text-[#89512B] dark:text-[#E6AC78]">Friday · Evening</p><p class="mt-1 font-['Playfair_Display'] text-xl font-semibold">Poetry &amp; Open Mic</p></div><span class="self-start rounded-full bg-[#F0E2D0] px-3 py-1.5 text-xs font-semibold text-[#59483B] dark:bg-[#594437] dark:text-[#F5EBDD]">Words &amp; music</span></li>
-          <li class="flex flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5 sm:px-8"><div><p class="text-xs font-bold uppercase tracking-widest text-[#89512B] dark:text-[#E6AC78]">Saturday · Afternoon</p><p class="mt-1 font-['Playfair_Display'] text-xl font-semibold">The Book Club</p></div><span class="self-start rounded-full bg-[#F0E2D0] px-3 py-1.5 text-xs font-semibold text-[#59483B] dark:bg-[#594437] dark:text-[#F5EBDD]">Read &amp; connect</span></li>
-          <li class="flex flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5 sm:px-8"><div><p class="text-xs font-bold uppercase tracking-widest text-[#89512B] dark:text-[#E6AC78]">Sunday · Morning</p><p class="mt-1 font-['Playfair_Display'] text-xl font-semibold">Writing Workshop</p></div><span class="self-start rounded-full bg-[#F0E2D0] px-3 py-1.5 text-xs font-semibold text-[#59483B] dark:bg-[#594437] dark:text-[#F5EBDD]">Create &amp; share</span></li>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2>
+        <ul class="mt-5 space-y-3">
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="index.html">Home</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="menu.html">Menu</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="gallery.html">Gallery</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="events.html">Events</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="contact.html">Contact</a></li>
         </ul>
-        <p class="border-t border-[#E2D2BF] px-6 py-4 text-xs leading-6 text-[#645246] dark:border-[#60483A] dark:text-[#E9DACA] sm:px-8">Sample schedule only. No confirmed events, tickets or booking service.</p>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2>
+        <p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br />Fictional business concept</p>
+        <p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a
+          class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="contact.html">Contact us <span aria-hidden="true">→</span></a>
       </div>
     </div>
-  </section>
-
-  <section aria-labelledby="moments-title" class="bg-[#F5EBDD] py-16 dark:bg-[#251B16] sm:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-      <div class="mx-auto mb-10 max-w-2xl text-center">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#89512B] dark:text-[#E6AC78]">The Little Things</p>
-        <h2 id="moments-title" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-5xl">More Than an <span class="text-[#89512B] dark:text-[#E6AC78]">Event.</span></h2>
-        <p class="mt-5 text-sm leading-7 text-[#645246] dark:text-[#E9DACA] sm:text-base">It is about the conversations that continue long after the last sip.</p>
-      </div>
-      <div class="grid gap-6 md:grid-cols-3">
-        <article class="rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] p-7 dark:border-[#594437] dark:bg-[#35271F]"><span aria-hidden="true" class="text-3xl">📖</span><h3 class="mt-5 font-['Playfair_Display'] text-2xl font-semibold">Discover New Ideas</h3><p class="mt-3 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Find your next favorite author, poem or unexpected perspective.</p></article>
-        <article class="rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] p-7 dark:border-[#594437] dark:bg-[#35271F]"><span aria-hidden="true" class="text-3xl">☕</span><h3 class="mt-5 font-['Playfair_Display'] text-2xl font-semibold">Feel Right at Home</h3><p class="mt-3 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Come as you are, pull up a chair and enjoy the warmth of good company.</p></article>
-        <article class="rounded-2xl border border-[#E2D2BF] bg-[#FFF9F1] p-7 dark:border-[#594437] dark:bg-[#35271F]"><span aria-hidden="true" class="text-3xl">✍️</span><h3 class="mt-5 font-['Playfair_Display'] text-2xl font-semibold">Make Something Yours</h3><p class="mt-3 text-sm leading-7 text-[#645246] dark:text-[#E9DACA]">Bring your curiosity and leave with a fresh spark of inspiration.</p></article>
-      </div>
+    <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6">
+      <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
     </div>
-  </section>
-
-  <section id="join-us" aria-labelledby="join-title" class="scroll-mt-8 bg-[#251B16] py-16 text-[#F5EBDD] sm:py-24">
-    <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-9 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
-      <div class="max-w-2xl">
-        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#E6AC78]">Your Next Chapter Starts Here</p>
-        <h2 id="join-title" class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-5xl">Every Great Story <span class="text-[#E6AC78]">Needs Company.</span></h2>
-        <p class="mt-5 max-w-xl text-base leading-8 text-[#E9DACA]">Have an idea for a gathering or a question about our café concept? We would love to hear from you.</p>
-      </div>
-      <a href="contact.html" class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B77946] px-8 py-4 text-sm font-bold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Contact Chapter &amp; Chai <span aria-hidden="true" class="ml-2">↗</span></a>
-    </div>
-  </section>
-</main>
-
-<footer class="bg-[#1B1410] text-[#F5EBDD]">
-<div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-<div><a class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="index.html">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a><p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good conversations.</p></div>
-<div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2><ul class="mt-5 space-y-3"><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="index.html">Home</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="events.html">Events</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a></li></ul></div>
-<div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2><p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br/>Fictional business concept</p><p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="contact.html">Contact us <span aria-hidden="true">→</span></a></div>
-</div>
-<div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6"><p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p></div>
-</footer>
+  </footer>
+  <script>
+    // Keep the hero image visible behind the navbar until the page is scrolled.
+    (() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
+      updateHeader(); // Handles page refreshes and direct links to page sections.
+      window.addEventListener('scroll', updateHeader, { passive: true });
+    })();
+  </script>
 </body>
+
 </html>

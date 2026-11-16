@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-pt-24">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Reach out to Chapter & Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
+  <meta name="description"
+    content="Reach out to Chapter & Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
   <meta name="theme-color" content="#251B16">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Contact | Chapter & Chai — Let's Talk Over Chai</title>
@@ -13,171 +15,363 @@
   <meta property="og:site_name" content="Chapter &amp; Chai">
   <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Contact | Chapter &amp; Chai — Let&#x27;s Talk Over Chai">
-  <meta property="og:description" content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
+  <meta property="og:description"
+    content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
   <meta property="og:url" content="https://chapter-and-chai.vercel.app/contact.html">
-  <meta property="og:image" content="https://chapter-and-chai.vercel.app/assets/images/Gallery%20Page/gallery-interior.jpeg">
+  <meta property="og:image"
+    content="https://chapter-and-chai.vercel.app/assets/images/Gallery%20Page/gallery-interior.jpeg">
   <meta property="og:image:alt" content="Cozy interior of the Chapter &amp; Chai book café">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact | Chapter &amp; Chai — Let&#x27;s Talk Over Chai">
-  <meta name="twitter:description" content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
-  <meta name="twitter:image" content="https://chapter-and-chai.vercel.app/assets/images/Gallery%20Page/gallery-interior.jpeg">
+  <meta name="twitter:description"
+    content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
+  <meta name="twitter:image"
+    content="https://chapter-and-chai.vercel.app/assets/images/Gallery%20Page/gallery-interior.jpeg">
   <!-- End SEO and social sharing metadata -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <!-- Navbar stays transparent over the hero, then gains contrast when scrolling. -->
+  <style>
+    .site-header {
+      background-color: transparent;
+      transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
+    }
+
+    .site-header.is-scrolled {
+      background-color: rgba(37, 27, 22, 0.95);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header {
+        transition: none;
+      }
+    }
+  </style>
 </head>
+
 <body class="min-w-0 bg-[#F5EBDD] font-['Inter'] text-[#251B16] antialiased dark:bg-[#251B16] dark:text-[#F5EBDD]">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]">Skip to main content</a>
-<header class="relative z-30 bg-[#251B16] text-[#F5EBDD]">
-<nav aria-label="Main navigation" class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
-<a aria-label="Chapter and Chai, home" class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl" href="index.html">
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]">Skip
+    to main content</a>
+  <header class="site-header fixed inset-x-0 top-0 z-40 text-[#F5EBDD]">
+    <nav aria-label="Main navigation"
+      class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
+      <a aria-label="Chapter and Chai, home"
+        class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl"
+        href="index.html">
         Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span class="text-[#E6AC78]">.</span>
-</a>
-<div class="hidden items-center gap-6 md:flex lg:gap-8">
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="index.html">Home</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="events.html">Events</a>
-<a aria-current="page" class="border-b-2 border-[#E6AC78] pb-1 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a>
-</div>
-<a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex" href="contact.html">Plan Your Visit</a>
-<details class="relative md:hidden">
-<summary class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">Menu <span aria-hidden="true">☰</span></summary>
-<div class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="index.html">Home</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="events.html">Events</a>
-<a aria-current="page" class="rounded-lg bg-white/10 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a>
-</div>
-</details>
-</nav>
-</header>
-<main id="main-content">
-  <!-- HERO / EDITORIAL INTRO: the existing navbar above remains unchanged -->
-  <section aria-labelledby="contact-title" class="relative isolate overflow-hidden bg-[#251B16] text-[#F5EBDD]">
-    <div aria-hidden="true" class="pointer-events-none absolute -left-32 top-24 h-[390px] w-[390px] rounded-full border border-[#B77946]/20"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -left-20 top-36 h-[290px] w-[290px] rounded-full border border-[#B77946]/15"></div>
-    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:min-h-[660px] lg:grid-cols-[minmax(0,1fr)_minmax(0,0.94fr)] lg:gap-14 lg:px-10 lg:pb-24 lg:pt-16">
-      <div class="relative z-10 min-w-0 max-w-[600px]">
-        <p class="mb-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.23em] text-[#E6AC78]"><span aria-hidden="true" class="h-px w-9 bg-[#B77946]"></span> Chapter &amp; Chai / Contact</p>
-        <h1 id="contact-title" class="font-['Playfair_Display'] text-[clamp(3.4rem,6.4vw,6.5rem)] font-semibold leading-[1.04] tracking-[-0.045em]">Let's talk <span class="block italic font-medium text-[#E6AC78]">over chai.</span></h1>
-        <p class="mt-8 max-w-[460px] text-base leading-8 text-[#EADBCB] sm:text-lg">A question, a book recommendation, or an idea for our next gathering? We'd love to hear your story.</p>
-        <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5">
-          <a href="#write-to-us" class="inline-flex items-center justify-center gap-4 rounded-full bg-[#B77946] px-7 py-4 text-sm font-semibold text-[#251B16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Write to us <span aria-hidden="true">↗</span></a>
-          <a href="#find-us" class="inline-flex items-center gap-2 border-b border-[#B77946] pb-1 text-sm font-semibold text-[#F5EBDD] transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Explore Jaipur <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="mt-12 flex max-w-[450px] items-start gap-5 border-t border-[#9C806A]/45 pt-6">
-          <span class="font-['Playfair_Display'] text-4xl leading-none text-[#E6AC78]" aria-hidden="true">“</span>
-          <p class="pt-1 font-['Playfair_Display'] text-lg italic leading-7 text-[#E9DACA]">Where good coffee meets even better conversations.</p>
-        </div>
+      </a>
+      <div class="hidden items-center gap-6 md:flex lg:gap-8">
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="index.html">Home</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="menu.html">Menu</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="gallery.html">Gallery</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="events.html">Events</a>
+        <a aria-current="page"
+          class="border-b-2 border-[#E6AC78] pb-1 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="contact.html">Contact</a>
       </div>
-      <figure class="relative mx-auto w-full min-w-0 max-w-[480px] lg:ml-auto">
-        <div class="relative h-[350px] w-full overflow-hidden rounded-t-[9rem] rounded-b-[1.5rem] border border-[#B77946]/35 bg-[#493024] shadow-[0_24px_65px_-24px_rgba(0,0,0,0.45)] sm:h-[425px] lg:h-[450px]">
-          <img src="assets/images/Gallery Page/gallery-interior.jpeg" alt="Warmly lit café interior with wooden tables, pendant lamps and comfortable seating" width="900" height="1100" fetchpriority="high" class="h-full w-full object-cover object-center" />
-          <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#251B16]/65 to-transparent"></div>
-          <figcaption class="absolute bottom-6 left-6 right-6 flex items-center justify-between gap-3 border-t border-white/40 pt-3 text-[11px] font-semibold uppercase tracking-[0.17em] text-white sm:left-8 sm:right-8"><span>Stories. Sips. Slow afternoons.</span></figcaption>
+      <a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex"
+        href="contact.html">Plan Your Visit</a>
+      <details class="relative md:hidden">
+        <summary
+          class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
+          Menu <span aria-hidden="true">☰</span></summary>
+        <div
+          class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="index.html">Home</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="menu.html">Menu</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="gallery.html">Gallery</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="events.html">Events</a>
+          <a aria-current="page"
+            class="rounded-lg bg-white/10 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="contact.html">Contact</a>
         </div>
-      </figure>
-    </div>
-    <div class="border-t border-[#73513C]/65 bg-[#2B1E18]">
-      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-4 py-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#E9DACA] sm:px-6 lg:px-10">
-        <span>For the love of books</span><span class="text-[#E6AC78]">✦</span><span>For the warmth of coffee</span><span class="hidden text-[#E6AC78] sm:inline">✦</span><span>Inspired by Jaipur</span>
+      </details>
+    </nav>
+  </header>
+  <main id="main-content">
+    <!-- HERO / EDITORIAL INTRO: the existing navbar above remains unchanged -->
+    <section aria-labelledby="contact-title" class="relative isolate overflow-hidden bg-[#251B16] text-[#F5EBDD]">
+      <div aria-hidden="true"
+        class="pointer-events-none absolute -left-32 top-24 h-[390px] w-[390px] rounded-full border border-[#B77946]/20">
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT FORM / QUIET, WARM EDITORIAL LAYOUT -->
-  <section id="write-to-us" aria-labelledby="write-title" class="bg-[#FFF9F1] py-20 text-[#251B16] dark:bg-[#2E211B] dark:text-[#F5EBDD] sm:py-24 lg:py-28">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-      <div class="mb-12 flex flex-col gap-6 border-b border-[#D6C1A8] pb-9 dark:border-[#6C5242] lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#99602F] dark:text-[#E6AC78]">01 / Start a conversation</p>
-          <h2 id="write-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-[3.5rem]">Leave us <span class="italic text-[#A66B3F] dark:text-[#E6AC78]">a note.</span></h2>
-        </div>
-        <p class="max-w-sm text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">From book-club ideas to a simple hello, there's always room for another conversation.</p>
+      <div aria-hidden="true"
+        class="pointer-events-none absolute -left-20 top-36 h-[290px] w-[290px] rounded-full border border-[#B77946]/15">
       </div>
-      <div class="grid gap-16 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.8fr)] lg:gap-24">
-        <div class="min-w-0">
-          <form class="space-y-8" aria-describedby="demo-form-note">
-            <div class="grid gap-8 sm:grid-cols-2">
-              <div>
-                <label for="full-name" class="mb-2 block text-sm font-semibold">Your name <span class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                <input id="full-name" name="full_name" type="text" autocomplete="name" required maxlength="100" placeholder="Full name" class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
-              </div>
-              <div>
-                <label for="phone" class="mb-2 block text-sm font-semibold">Phone number <span class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25" placeholder="Your phone number" class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
-              </div>
-            </div>
-            <div>
-              <label for="email" class="mb-2 block text-sm font-semibold">Email address <span class="font-normal text-[#756352] dark:text-[#C6B7A8]">(optional)</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" maxlength="150" placeholder="you@example.com" class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
-            </div>
-            <div>
-              <label for="enquiry" class="mb-2 block text-sm font-semibold">What is this about? <span class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-              <select id="enquiry" name="enquiry" required class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:bg-[#2E211B] dark:text-[#F5EBDD] dark:focus:border-[#E6AC78]">
-                <option value="" disabled selected>Choose an enquiry</option>
-                <option value="general">General enquiry</option>
-                <option value="visit">Café visit / table enquiry</option>
-                <option value="book-club">Book club</option>
-                <option value="event">Events &amp; workshops</option>
-                <option value="feedback">Feedback</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="mb-2 block text-sm font-semibold">Your message <span class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-              <textarea id="message" name="message" rows="4" minlength="10" maxlength="2000" required placeholder="Tell us what's on your mind..." class="w-full min-w-0 resize-y rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]"></textarea>
-            </div>
-            <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required fields. This form is a design preview for a fictional café. You can try the fields, but sending is disabled: no messages are submitted or stored.</p>
-            <button type="button" disabled aria-describedby="demo-form-note" class="inline-flex cursor-not-allowed items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] opacity-65 dark:bg-[#B77946] dark:text-[#251B16]">Sending unavailable <span aria-hidden="true">↗</span></button>
-          </form>
-        </div>
-        <aside aria-label="Visit information" class="min-w-0">
-          <figure class="overflow-hidden rounded-t-[8rem] rounded-b-xl">
-            <img src="assets/images/Home Page/reading-corner.jpeg" alt="A cozy reading corner with warm lighting and comfortable seating" loading="lazy" decoding="async" width="900" height="700" class="h-64 w-full object-cover sm:h-72 lg:h-64" />
-          </figure>
-          <div class="mt-8 divide-y divide-[#D8C4AC] border-t border-[#D8C4AC] dark:divide-[#6C5242] dark:border-[#6C5242]">
-            <div class="py-6"><p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">01 / Our city</p><h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Rooted in Jaipur</h3><p class="mt-2 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Jaipur, Rajasthan, India. A fictional café concept, not an operating venue.</p></div>
-            <div class="py-6"><p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">02 / Sample opening hours</p><h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">A little time to unwind</h3><dl class="mt-3 space-y-2 text-sm"><div class="flex flex-wrap justify-between gap-3"><dt>Monday – Friday</dt><dd class="font-semibold">9 AM – 10 PM</dd></div><div class="flex flex-wrap justify-between gap-3"><dt>Saturday – Sunday</dt><dd class="font-semibold">9 AM – 10 PM</dd></div></dl></div>
-            <div class="py-6"><p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">03 / Stay for the stories</p><h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Community, always.</h3><a href="events.html" class="mt-3 inline-flex items-center gap-2 border-b border-[#B77946] pb-1 text-sm font-semibold transition-colors hover:text-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946]">Discover our events <span aria-hidden="true">↗</span></a></div>
+      <div
+        class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-32 sm:px-6 sm:pb-20 sm:pt-36 lg:min-h-[660px] lg:grid-cols-[minmax(0,1fr)_minmax(0,0.94fr)] lg:gap-14 lg:px-10 lg:pb-24 lg:pt-36">
+        <div class="relative z-10 min-w-0 max-w-[600px]">
+          <p class="mb-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.23em] text-[#E6AC78]"><span
+              aria-hidden="true" class="h-px w-9 bg-[#B77946]"></span> Chapter &amp; Chai / Contact</p>
+          <h1 id="contact-title"
+            class="font-['Playfair_Display'] text-[clamp(3.4rem,6.4vw,6.5rem)] font-semibold leading-[1.04] tracking-[-0.045em]">
+            Let's talk <span class="block italic font-medium text-[#E6AC78]">over chai.</span></h1>
+          <p class="mt-8 max-w-[460px] text-base leading-8 text-[#EADBCB] sm:text-lg">A question, a book recommendation,
+            or an idea for our next gathering? We'd love to hear your story.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5">
+            <a href="#write-to-us"
+              class="inline-flex items-center justify-center gap-4 rounded-full bg-[#B77946] px-7 py-4 text-sm font-semibold text-[#251B16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Write
+              to us <span aria-hidden="true">↗</span></a>
+            <a href="#find-us"
+              class="inline-flex items-center gap-2 border-b border-[#B77946] pb-1 text-sm font-semibold text-[#F5EBDD] transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Explore
+              Jaipur <span aria-hidden="true">↗</span></a>
           </div>
-        </aside>
+          <div class="mt-12 flex max-w-[450px] items-start gap-5 border-t border-[#9C806A]/45 pt-6">
+            <span class="font-['Playfair_Display'] text-4xl leading-none text-[#E6AC78]" aria-hidden="true">“</span>
+            <p class="pt-1 font-['Playfair_Display'] text-lg italic leading-7 text-[#E9DACA]">Where good coffee meets
+              even better conversations.</p>
+          </div>
+        </div>
+        <figure class="relative mx-auto w-full min-w-0 max-w-[480px] lg:ml-auto">
+          <div
+            class="relative h-[350px] w-full overflow-hidden rounded-t-[9rem] rounded-b-[1.5rem] border border-[#B77946]/35 bg-[#493024] shadow-[0_24px_65px_-24px_rgba(0,0,0,0.45)] sm:h-[425px] lg:h-[450px]">
+            <img src="assets/images/Gallery Page/gallery-interior.jpeg"
+              alt="Warmly lit café interior with wooden tables, pendant lamps and comfortable seating" width="900"
+              height="1100" fetchpriority="high" class="h-full w-full object-cover object-center" />
+            <div aria-hidden="true"
+              class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#251B16]/65 to-transparent"></div>
+            <figcaption
+              class="absolute bottom-6 left-6 right-6 flex items-center justify-between gap-3 border-t border-white/40 pt-3 text-[11px] font-semibold uppercase tracking-[0.17em] text-white sm:left-8 sm:right-8">
+              <span>Stories. Sips. Slow afternoons.</span>
+            </figcaption>
+          </div>
+        </figure>
       </div>
-    </div>
-  </section>
+      <div class="border-t border-[#73513C]/65 bg-[#2B1E18]">
+        <div
+          class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-4 py-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#E9DACA] sm:px-6 lg:px-10">
+          <span>For the love of books</span><span class="text-[#E6AC78]">✦</span><span>For the warmth of
+            coffee</span><span class="hidden text-[#E6AC78] sm:inline">✦</span><span>Inspired by Jaipur</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- LOCATION / CITY MAP -->
-  <section id="find-us" aria-labelledby="map-title" class="bg-[#E9DAC5] py-20 dark:bg-[#382820] sm:py-24 lg:py-28">
-    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.77fr)_minmax(0,1.23fr)] lg:gap-16 lg:px-10">
-      <div class="min-w-0">
-        <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#99602F] dark:text-[#E6AC78]">02 / A city full of stories</p>
-        <h2 id="map-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.12] tracking-tight sm:text-5xl">Inspired by <span class="italic text-[#A66B3F] dark:text-[#E6AC78]">Jaipur.</span></h2>
-        <p class="mt-6 max-w-sm text-base leading-8 text-[#5E4A3D] dark:text-[#E9DACA]">Warm conversations, rich culture and a city that always has another story to tell.</p>
-        <div class="mt-8 flex items-start gap-4 border-t border-[#C7A98A] pt-6 dark:border-[#6C5242]"><span class="mt-1 text-xl text-[#99602F] dark:text-[#E6AC78]" aria-hidden="true">⌖</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Jaipur, Rajasthan</h3><p class="mt-1 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">This map highlights Jaipur city only. Chapter &amp; Chai is a fictional project, not a real café address.</p></div></div>
+    <!-- CONTACT FORM / QUIET, WARM EDITORIAL LAYOUT -->
+    <section id="write-to-us" aria-labelledby="write-title"
+      class="bg-[#FFF9F1] py-20 text-[#251B16] dark:bg-[#2E211B] dark:text-[#F5EBDD] sm:py-24 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div
+          class="mb-12 flex flex-col gap-6 border-b border-[#D6C1A8] pb-9 dark:border-[#6C5242] lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#99602F] dark:text-[#E6AC78]">01 /
+              Start a conversation</p>
+            <h2 id="write-title"
+              class="font-['Playfair_Display'] text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-[3.5rem]">
+              Leave us <span class="italic text-[#A66B3F] dark:text-[#E6AC78]">a note.</span></h2>
+          </div>
+          <p class="max-w-sm text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">From book-club ideas to a simple
+            hello, there's always room for another conversation.</p>
+        </div>
+        <div class="grid gap-16 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.8fr)] lg:gap-24">
+          <div class="min-w-0">
+            <form class="space-y-8" aria-describedby="demo-form-note">
+              <div class="grid gap-8 sm:grid-cols-2">
+                <div>
+                  <label for="full-name" class="mb-2 block text-sm font-semibold">Your name <span
+                      class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
+                  <input id="full-name" name="full_name" type="text" autocomplete="name" required maxlength="100"
+                    placeholder="Full name"
+                    class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
+                </div>
+                <div>
+                  <label for="phone" class="mb-2 block text-sm font-semibold">Phone number <span
+                      class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25"
+                    placeholder="Your phone number"
+                    class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
+                </div>
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-semibold">Email address <span
+                    class="font-normal text-[#756352] dark:text-[#C6B7A8]">(optional)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="150"
+                  placeholder="you@example.com"
+                  class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
+              </div>
+              <div>
+                <label for="enquiry" class="mb-2 block text-sm font-semibold">What is this about? <span
+                    class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
+                <select id="enquiry" name="enquiry" required
+                  class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:bg-[#2E211B] dark:text-[#F5EBDD] dark:focus:border-[#E6AC78]">
+                  <option value="" disabled selected>Choose an enquiry</option>
+                  <option value="general">General enquiry</option>
+                  <option value="visit">Café visit / table enquiry</option>
+                  <option value="book-club">Book club</option>
+                  <option value="event">Events &amp; workshops</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="mb-2 block text-sm font-semibold">Your message <span
+                    class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
+                <textarea id="message" name="message" rows="4" minlength="10" maxlength="2000" required
+                  placeholder="Tell us what's on your mind..."
+                  class="w-full min-w-0 resize-y rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]"></textarea>
+              </div>
+              <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required
+                fields. This form is a design preview for a fictional café. You can try the fields, but sending is
+                disabled: no messages are submitted or stored.</p>
+              <button type="button" disabled aria-describedby="demo-form-note"
+                class="inline-flex cursor-not-allowed items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] opacity-65 dark:bg-[#B77946] dark:text-[#251B16]">Sending
+                unavailable <span aria-hidden="true">↗</span></button>
+            </form>
+          </div>
+          <aside aria-label="Visit information" class="min-w-0">
+            <figure class="overflow-hidden rounded-t-[8rem] rounded-b-xl">
+              <img src="assets/images/Home Page/reading-corner.jpeg"
+                alt="A cozy reading corner with warm lighting and comfortable seating" loading="lazy" decoding="async"
+                width="900" height="700" class="h-64 w-full object-cover sm:h-72 lg:h-64" />
+            </figure>
+            <div
+              class="mt-8 divide-y divide-[#D8C4AC] border-t border-[#D8C4AC] dark:divide-[#6C5242] dark:border-[#6C5242]">
+              <div class="py-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">01 / Our
+                  city</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Rooted in Jaipur</h3>
+                <p class="mt-2 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Jaipur, Rajasthan, India. A
+                  fictional café concept, not an operating venue.</p>
+              </div>
+              <div class="py-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">02 /
+                  Sample opening hours</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">A little time to unwind</h3>
+                <dl class="mt-3 space-y-2 text-sm">
+                  <div class="flex flex-wrap justify-between gap-3">
+                    <dt>Monday – Friday</dt>
+                    <dd class="font-semibold">9 AM – 10 PM</dd>
+                  </div>
+                  <div class="flex flex-wrap justify-between gap-3">
+                    <dt>Saturday – Sunday</dt>
+                    <dd class="font-semibold">9 AM – 10 PM</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="py-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">03 /
+                  Stay for the stories</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Community, always.</h3><a
+                  href="events.html"
+                  class="mt-3 inline-flex items-center gap-2 border-b border-[#B77946] pb-1 text-sm font-semibold transition-colors hover:text-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946]">Discover
+                  our events <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
-      <div class="min-w-0 overflow-hidden rounded-[1.5rem] border-[5px] border-[#FFF9F1] bg-[#FFF9F1] shadow-[0_28px_65px_-38px_rgba(37,27,22,0.55)] dark:border-[#6B5140] dark:bg-[#6B5140]">
-        <iframe title="Map of Jaipur city, Rajasthan, India — not a café address" src="https://www.google.com/maps?q=Jaipur%2C%20Rajasthan%2C%20India&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen class="block h-[340px] w-full border-0 sm:h-[430px]"></iframe>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CLOSING CTA -->
-  <section aria-labelledby="closing-title" class="bg-[#251B16] py-20 text-[#F5EBDD] sm:py-24">
-    <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
-      <div><p class="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#E6AC78]">The next chapter awaits</p><h2 id="closing-title" class="max-w-2xl font-['Playfair_Display'] text-4xl font-semibold leading-tight sm:text-5xl">Great stories are <span class="italic text-[#E6AC78]">shared.</span></h2></div>
-      <a href="events.html" class="inline-flex shrink-0 items-center gap-4 rounded-full border border-[#E6AC78] px-7 py-4 text-sm font-semibold transition-colors hover:bg-[#E6AC78] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Explore our events <span aria-hidden="true">↗</span></a>
+    <!-- LOCATION / CITY MAP -->
+    <section id="find-us" aria-labelledby="map-title" class="bg-[#E9DAC5] py-20 dark:bg-[#382820] sm:py-24 lg:py-28">
+      <div
+        class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.77fr)_minmax(0,1.23fr)] lg:gap-16 lg:px-10">
+        <div class="min-w-0">
+          <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#99602F] dark:text-[#E6AC78]">02 / A
+            city full of stories</p>
+          <h2 id="map-title"
+            class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.12] tracking-tight sm:text-5xl">Inspired
+            by <span class="italic text-[#A66B3F] dark:text-[#E6AC78]">Jaipur.</span></h2>
+          <p class="mt-6 max-w-sm text-base leading-8 text-[#5E4A3D] dark:text-[#E9DACA]">Warm conversations, rich
+            culture and a city that always has another story to tell.</p>
+          <div class="mt-8 flex items-start gap-4 border-t border-[#C7A98A] pt-6 dark:border-[#6C5242]"><span
+              class="mt-1 text-xl text-[#99602F] dark:text-[#E6AC78]" aria-hidden="true">⌖</span>
+            <div>
+              <h3 class="font-['Playfair_Display'] text-xl font-semibold">Jaipur, Rajasthan</h3>
+              <p class="mt-1 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">This map highlights Jaipur city only.
+                Chapter &amp; Chai is a fictional project, not a real café address.</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="min-w-0 overflow-hidden rounded-[1.5rem] border-[5px] border-[#FFF9F1] bg-[#FFF9F1] shadow-[0_28px_65px_-38px_rgba(37,27,22,0.55)] dark:border-[#6B5140] dark:bg-[#6B5140]">
+          <iframe title="Map of Jaipur city, Rajasthan, India — not a café address"
+            src="https://www.google.com/maps?q=Jaipur%2C%20Rajasthan%2C%20India&amp;output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+            class="block h-[340px] w-full border-0 sm:h-[430px]"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section aria-labelledby="closing-title" class="bg-[#251B16] py-20 text-[#F5EBDD] sm:py-24">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
+        <div>
+          <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#E6AC78]">The next chapter awaits</p>
+          <h2 id="closing-title"
+            class="max-w-2xl font-['Playfair_Display'] text-4xl font-semibold leading-tight sm:text-5xl">Great stories
+            are <span class="italic text-[#E6AC78]">shared.</span></h2>
+        </div>
+        <a href="events.html"
+          class="inline-flex shrink-0 items-center gap-4 rounded-full border border-[#E6AC78] px-7 py-4 text-sm font-semibold transition-colors hover:bg-[#E6AC78] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Explore
+          our events <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#1B1410] text-[#F5EBDD]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
+      <div><a
+          class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="index.html">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a>
+        <p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good
+          conversations.</p>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2>
+        <ul class="mt-5 space-y-3">
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="index.html">Home</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="menu.html">Menu</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="gallery.html">Gallery</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="events.html">Events</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2>
+        <p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br />Fictional business concept</p>
+        <p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a
+          class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="contact.html">Contact us <span aria-hidden="true">→</span></a>
+      </div>
     </div>
-  </section>
-</main>
-<footer class="bg-[#1B1410] text-[#F5EBDD]">
-<div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-<div><a class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="index.html">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a><p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good conversations.</p></div>
-<div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2><ul class="mt-5 space-y-3"><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="index.html">Home</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="events.html">Events</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a></li></ul></div>
-<div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2><p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br/>Fictional business concept</p><p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="contact.html">Contact us <span aria-hidden="true">→</span></a></div>
-</div>
-<div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6"><p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p></div>
-</footer>
+    <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6">
+      <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
+    </div>
+  </footer>
+  <script>
+    // Keep the hero image visible behind the navbar until the page is scrolled.
+    (() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
+      updateHeader(); // Handles page refreshes and direct links to page sections.
+      window.addEventListener('scroll', updateHeader, { passive: true });
+    })();
+  </script>
 </body>
+
 </html>

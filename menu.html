@@ -1,580 +1,854 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" class="scroll-pt-24">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Explore coffee, chai, fresh bakes and desserts at Chapter &amp; Chai. Discover our café menu and prices." name="description"/>
-<meta content="#251B16" name="theme-color"/>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>Our Menu | Chapter &amp; Chai — Jaipur Book Café</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta
+    content="Explore coffee, chai, fresh bakes and desserts at Chapter &amp; Chai. Discover our café menu and prices."
+    name="description" />
+  <meta content="#251B16" name="theme-color" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Our Menu | Chapter &amp; Chai — Jaipur Book Café</title>
   <!-- SEO and social sharing metadata -->
   <link rel="canonical" href="https://chapter-and-chai.vercel.app/menu.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Chapter &amp; Chai">
   <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Our Menu | Chapter &amp; Chai — Jaipur Book Café">
-  <meta property="og:description" content="Explore coffee, chai, fresh bakes and desserts at Chapter &amp; Chai. Discover our café menu and prices.">
+  <meta property="og:description"
+    content="Explore coffee, chai, fresh bakes and desserts at Chapter &amp; Chai. Discover our café menu and prices.">
   <meta property="og:url" content="https://chapter-and-chai.vercel.app/menu.html">
   <meta property="og:image" content="https://chapter-and-chai.vercel.app/assets/images/Home%20Page/cover.jpeg">
   <meta property="og:image:alt" content="Fresh coffee served at Chapter &amp; Chai">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Menu | Chapter &amp; Chai — Jaipur Book Café">
-  <meta name="twitter:description" content="Explore coffee, chai, fresh bakes and desserts at Chapter &amp; Chai. Discover our café menu and prices.">
+  <meta name="twitter:description"
+    content="Explore coffee, chai, fresh bakes and desserts at Chapter &amp; Chai. Discover our café menu and prices.">
   <meta name="twitter:image" content="https://chapter-and-chai.vercel.app/assets/images/Home%20Page/cover.jpeg">
   <!-- End SEO and social sharing metadata -->
-<!-- Tailwind Play CDN is used for this learning project. Production deployments should ideally use a compiled Tailwind build. -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Tailwind Play CDN is used for this learning project. Production deployments should ideally use a compiled Tailwind build. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Navbar stays transparent over the hero, then gains contrast when scrolling. -->
+  <style>
+    .site-header {
+      background-color: transparent;
+      transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
+    }
+
+    .site-header.is-scrolled {
+      background-color: rgba(37, 27, 22, 0.95);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header {
+        transition: none;
+      }
+    }
+  </style>
 </head>
+
 <body class="min-w-0 bg-[#F5EBDD] font-['Inter'] text-[#251B16] antialiased dark:bg-[#251B16] dark:text-[#F5EBDD]">
-<a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]" href="#main-content">Skip to main content</a>
-<!-- HEADER / NAVIGATION -->
-<header class="absolute inset-x-0 top-0 z-30 text-[#F5EBDD]">
-<nav aria-label="Main navigation" class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
-<a aria-label="Chapter and Chai, home" class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl" href="index.html">
+  <a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]"
+    href="#main-content">Skip to main content</a>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header fixed inset-x-0 top-0 z-40 text-[#F5EBDD]">
+    <nav aria-label="Main navigation"
+      class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
+      <a aria-label="Chapter and Chai, home"
+        class="shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl"
+        href="index.html">
         Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span class="text-[#E6AC78]">.</span>
-</a>
-<div class="hidden items-center gap-6 md:flex lg:gap-8">
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="index.html">Home</a>
-<a aria-current="page" class="border-b-2 border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="events.html">Events</a>
-<a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a>
-</div>
-<a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex" href="contact.html">Visit Our Café</a>
-<details class="relative md:hidden">
-<summary class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">Menu <span aria-hidden="true">☰</span></summary>
-<div class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="index.html">Home</a>
-<a aria-current="page" class="rounded-lg bg-white/10 px-3 py-2 font-semibold hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="events.html">Events</a>
-<a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a>
-</div>
-</details>
-</nav>
-</header>
-<main id="main-content">
-<!-- ONE CONTINUOUS IMAGE: transparent navbar, menu hero and category navigation -->
-<div class="relative isolate overflow-hidden bg-[#251B16] text-white">
-<img alt="A cup of freshly brewed coffee in a warm café setting" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" fetchpriority="high" height="900" src="assets/images/Home Page/cover.jpeg" width="1400"/>
-<div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50"></div>
-<div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-transparent to-black/65"></div>
-<!-- MENU HERO -->
-<section aria-labelledby="menu-title" class="relative z-10 flex min-h-[520px] items-center pb-12 pt-36 sm:min-h-[590px] sm:pb-16 sm:pt-40">
-<div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
-<p class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#E6AC78]">Made to Sip. Made to Savour.</p>
-<h1 class="max-w-3xl font-['Playfair_Display'] text-4xl font-semibold leading-tight sm:text-6xl lg:text-7xl" id="menu-title">The Art of a <span class="text-[#E6AC78]">Good Break.</span></h1>
-<p class="mt-6 max-w-xl text-base leading-8 text-[#F7EBDD] sm:text-lg">Thoughtful brews, comforting bites and little treats for every kind of reader. Explore our imagined café menu.</p>
-<a class="mt-8 inline-flex items-center justify-center rounded-full bg-[#B77946] px-7 py-3.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#coffee">Explore the Menu <span aria-hidden="true" class="ml-2">↓</span></a>
-</div>
-</section>
-<!-- CATEGORY LINKS: FLEXBOX -->
-<nav aria-label="Menu categories" class="relative z-10 border-t border-white/20 bg-transparent">
-<div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 pb-9 pt-6 sm:gap-5 sm:px-6 sm:pb-11 lg:px-10">
-<a class="rounded-full border border-[#B77946] bg-[#B77946]/90 px-5 py-2.5 text-sm font-semibold text-[#251B16] backdrop-blur-sm transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#coffee">Coffee &amp; Chai</a>
-<a class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#bites">Bakes &amp; Bites</a>
-<a class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#desserts">Desserts</a>
-<a class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#pairing">Our Pairing</a>
-</div>
-</nav>
-</div><!-- end continuous hero image -->
-<!-- COFFEE &AMP; CHAI: RESPONSIVE CSS GRID -->
-<section aria-labelledby="coffee-title" class="scroll-mt-8 py-16 sm:py-20" id="coffee">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-<div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-<div class="max-w-2xl">
-<p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Menu / 01</p>
-<h2 class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl" id="coffee-title">Coffee &amp; Chai</h2>
-<p class="mt-4 text-base leading-7 text-[#59483B] dark:text-[#E9DACA]">From the first espresso shot to the last comforting sip of chai.</p>
-</div>
-<p class="font-['Playfair_Display'] text-lg italic text-[#99602F] dark:text-[#E6AC78]">Coffee, made for slow mornings.</p>
-</div>
-<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="A small espresso cup with rich, dark coffee" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/espresso.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Coffee</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Espresso</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹120</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Bold, smooth and beautifully simple.</p>
-</div>
-</article>
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Cappuccino with delicate milk foam in a ceramic cup" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/cappuccino.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Bestseller</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Classic Cappuccino</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹180</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">A rich espresso finished with velvety steamed milk.</p>
-</div>
-</article>
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Warm Indian masala chai served in a cup" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/masala-chai.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">House favourite</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Masala Chai</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹100</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">A cozy blend of tea, milk and aromatic spices.</p>
-</div>
-</article>
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Iced coffee in a tall glass" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/cold-coffee.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Cold brew-inspired</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Iced Coffee</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹190</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Chilled, creamy and made for sunny Jaipur afternoons.</p>
-</div>
-</article>
-</div>
-<!-- Expanded café options: native HTML details/summary, no custom JavaScript. -->
-<details id="more-coffee" class="group mt-9 overflow-hidden rounded-[1.75rem] border border-[#D9C5AA] bg-[#FFF9F1]/70 shadow-sm open:shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]/60">
-  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 transition-colors hover:bg-[#F0DFCA]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#B77946] dark:hover:bg-[#493429]/80 sm:px-7 sm:py-6 [&amp;::-webkit-details-marker]:hidden">
-    <span class="min-w-0">
-      <span class="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#99602F] dark:text-[#E6AC78]">Full café selection · 14 more choices</span>
-      <span class="mt-1 block font-['Playfair_Display'] text-xl font-semibold sm:text-2xl">Explore More Coffee & Chai Options</span>
-      <span class="mt-1 block text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Tap to see our full brew list and prices.</span>
-    </span>
-    <span aria-hidden="true" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#251B16] text-xl text-white transition-transform duration-300 group-open:rotate-180 dark:bg-[#B77946] dark:text-[#251B16]">⌄</span>
-  </summary>
-  <div class="border-t border-[#D9C5AA] px-4 pb-5 pt-5 dark:border-[#60483A] sm:px-6 sm:pb-6">
-    <ul class="grid min-w-0 gap-3 lg:grid-cols-2" aria-label="Explore More Coffee &amp; Chai Options">
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Americano</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹150</span>
+      </a>
+      <div class="hidden items-center gap-6 md:flex lg:gap-8">
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="index.html">Home</a>
+        <a aria-current="page"
+          class="border-b-2 border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="menu.html">Menu</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="gallery.html">Gallery</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="events.html">Events</a>
+        <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="contact.html">Contact</a>
+      </div>
+      <a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex"
+        href="contact.html">Visit Our Café</a>
+      <details class="relative md:hidden">
+        <summary
+          class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
+          Menu <span aria-hidden="true">☰</span></summary>
+        <div
+          class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="index.html">Home</a>
+          <a aria-current="page"
+            class="rounded-lg bg-white/10 px-3 py-2 font-semibold hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="menu.html">Menu</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="gallery.html">Gallery</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="events.html">Events</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+            href="contact.html">Contact</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main-content">
+    <!-- ONE CONTINUOUS IMAGE: transparent navbar, menu hero and category navigation -->
+    <div class="relative isolate overflow-hidden bg-[#251B16] text-white">
+      <img alt="A cup of freshly brewed coffee in a warm café setting"
+        class="absolute inset-0 -z-20 h-full w-full object-cover object-center" fetchpriority="high" height="900"
+        src="assets/images/Home Page/cover.jpeg" width="1400" />
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/75 to-black/50">
+      </div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-transparent to-black/65">
+      </div>
+      <!-- MENU HERO -->
+      <section aria-labelledby="menu-title"
+        class="relative z-10 flex min-h-[520px] items-center pb-12 pt-36 sm:min-h-[590px] sm:pb-16 sm:pt-40">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#E6AC78]">Made to Sip. Made to Savour.</p>
+          <h1 class="max-w-3xl font-['Playfair_Display'] text-4xl font-semibold leading-tight sm:text-6xl lg:text-7xl"
+            id="menu-title">The Art of a <span class="text-[#E6AC78]">Good Break.</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-[#F7EBDD] sm:text-lg">Thoughtful brews, comforting bites and
+            little treats for every kind of reader. Explore our imagined café menu.</p>
+          <a class="mt-8 inline-flex items-center justify-center rounded-full bg-[#B77946] px-7 py-3.5 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href="#coffee">Explore the Menu <span aria-hidden="true" class="ml-2">↓</span></a>
+        </div>
+      </section>
+      <!-- CATEGORY LINKS: FLEXBOX -->
+      <nav aria-label="Menu categories" class="relative z-10 border-t border-white/20 bg-transparent">
+        <div
+          class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 pb-9 pt-6 sm:gap-5 sm:px-6 sm:pb-11 lg:px-10">
+          <a class="rounded-full border border-[#B77946] bg-[#B77946]/90 px-5 py-2.5 text-sm font-semibold text-[#251B16] backdrop-blur-sm transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href="#coffee">Coffee &amp; Chai</a>
+          <a class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href="#bites">Bakes &amp; Bites</a>
+          <a class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href="#desserts">Desserts</a>
+          <a class="rounded-full border border-white/50 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href="#pairing">Our Pairing</a>
+        </div>
+      </nav>
+    </div><!-- end continuous hero image -->
+    <!-- COFFEE &AMP; CHAI: RESPONSIVE CSS GRID -->
+    <section aria-labelledby="coffee-title" class="scroll-mt-8 py-16 sm:py-20" id="coffee">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Menu /
+              01</p>
+            <h2 class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl"
+              id="coffee-title">Coffee &amp; Chai</h2>
+            <p class="mt-4 text-base leading-7 text-[#59483B] dark:text-[#E9DACA]">From the first espresso shot to the
+              last comforting sip of chai.</p>
+          </div>
+          <p class="font-['Playfair_Display'] text-lg italic text-[#99602F] dark:text-[#E6AC78]">Coffee, made for slow
+            mornings.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="A small espresso cup with rich, dark coffee"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/espresso.jpeg" width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Coffee</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Espresso</h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹120</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Bold, smooth and beautifully
+                simple.</p>
+            </div>
+          </article>
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Cappuccino with delicate milk foam in a ceramic cup"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/cappuccino.jpeg"
+                width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Bestseller</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Classic Cappuccino
+                </h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹180</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">A rich espresso finished with
+                velvety steamed milk.</p>
+            </div>
+          </article>
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Warm Indian masala chai served in a cup"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/masala-chai.jpeg"
+                width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">House
+                favourite</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Masala Chai</h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹100</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">A cozy blend of tea, milk and
+                aromatic spices.</p>
+            </div>
+          </article>
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Iced coffee in a tall glass"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/cold-coffee.jpeg"
+                width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Cold
+                brew-inspired</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Iced Coffee</h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹190</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Chilled, creamy and made for
+                sunny Jaipur afternoons.</p>
+            </div>
+          </article>
+        </div>
+        <!-- Expanded café options: native HTML details/summary, no custom JavaScript. -->
+        <details id="more-coffee"
+          class="group mt-9 overflow-hidden rounded-[1.75rem] border border-[#D9C5AA] bg-[#FFF9F1]/70 shadow-sm open:shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]/60">
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 transition-colors hover:bg-[#F0DFCA]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#B77946] dark:hover:bg-[#493429]/80 sm:px-7 sm:py-6 [&amp;::-webkit-details-marker]:hidden">
+            <span class="min-w-0">
+              <span
+                class="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#99602F] dark:text-[#E6AC78]">Full
+                café selection · 14 more choices</span>
+              <span class="mt-1 block font-['Playfair_Display'] text-xl font-semibold sm:text-2xl">Explore More Coffee &
+                Chai Options</span>
+              <span class="mt-1 block text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Tap to see our full brew
+                list and prices.</span>
+            </span>
+            <span aria-hidden="true"
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#251B16] text-xl text-white transition-transform duration-300 group-open:rotate-180 dark:bg-[#B77946] dark:text-[#251B16]">⌄</span>
+          </summary>
+          <div class="border-t border-[#D9C5AA] px-4 pb-5 pt-5 dark:border-[#60483A] sm:px-6 sm:pb-6">
+            <ul class="grid min-w-0 gap-3 lg:grid-cols-2" aria-label="Explore More Coffee &amp; Chai Options">
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Americano</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹150</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Espresso mellowed with hot water.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Caffè Latte</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹200</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Silky milk with a balanced
+                    espresso shot.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Flat White</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Velvety microfoam and a bold
+                    coffee finish.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Café Mocha</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹230</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Espresso, chocolate and steamed
+                    milk.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Vanilla Latte</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹225</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A smooth latte with a hint of
+                    vanilla.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Caramel Macchiato</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹245</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Layered espresso with caramel
+                    notes.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Hazelnut Cappuccino</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹230</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Nutty aroma with a creamy foam
+                    cap.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Cold Brew</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹210</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Slow-steeped, chilled and
+                    naturally smooth.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Iced Spanish Latte</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹240</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A chilled espresso with creamy
+                    sweetness.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Affogato</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹250</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A shot of espresso over vanilla
+                    ice cream.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">South Indian Filter Coffee
+                    </h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹130</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Aromatic, frothy and comforting.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Double Espresso</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹160</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Two rich shots for an extra kick.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Ginger Chai</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹115</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Classic chai warmed with fresh
+                    ginger.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Elaichi Chai</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹115</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Fragrant cardamom-infused milk
+                    tea.</p>
+                </div>
+              </li>
+            </ul>
+            <p class="mt-5 text-center text-xs leading-6 text-[#59483B] dark:text-[#E9DACA]">All prices are illustrative
+              for this fictional café concept.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+    <!-- BAKES &AMP; BITES: RESPONSIVE CSS GRID -->
+    <section aria-labelledby="bites-title" class="scroll-mt-8 py-16 sm:py-20 bg-[#EADBC7] dark:bg-[#32241D]" id="bites">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Menu /
+              02</p>
+            <h2 class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl"
+              id="bites-title">Bakes &amp; Bites</h2>
+            <p class="mt-4 text-base leading-7 text-[#59483B] dark:text-[#E9DACA]">Freshly imagined café favourites to
+              pair with your next chapter.</p>
+          </div>
+          <p class="font-['Playfair_Display'] text-lg italic text-[#99602F] dark:text-[#E6AC78]">A little something on
+            the side.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Golden flaky croissant served on a plate"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/croissant.jpeg" width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Bakery</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Butter Croissant
+                </h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹150</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Flaky, buttery layers that
+                pair perfectly with coffee.</p>
+            </div>
+          </article>
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Slice of rich chocolate cake on a plate"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/chocolate-cake.jpeg"
+                width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Dessert</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Chocolate Cake</h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹220</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Rich chocolate comfort in
+                every bite.</p>
+            </div>
+          </article>
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Toasted café sandwich with golden bread"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/sandwich.jpeg" width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Savory</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Grilled Sandwich
+                </h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹210</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Warm, crisp and filled with
+                feel-good flavours.</p>
+            </div>
+          </article>
+          <article
+            class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
+            <div class="relative overflow-hidden">
+              <img alt="Slice of creamy cheesecake on a dessert plate"
+                class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60"
+                decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/cheesecake.jpeg"
+                width="800" />
+              <span
+                class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Dessert</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Creamy Cheesecake
+                </h3>
+                <span
+                  class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹240</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Silky, sweet and the perfect
+                end to a chapter.</p>
+            </div>
+          </article>
+        </div>
+        <!-- Expanded café options: native HTML details/summary, no custom JavaScript. -->
+        <details id="more-bakes"
+          class="group mt-9 overflow-hidden rounded-[1.75rem] border border-[#D9C5AA] bg-[#FFF9F1]/70 shadow-sm open:shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]/60">
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 transition-colors hover:bg-[#F0DFCA]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#B77946] dark:hover:bg-[#493429]/80 sm:px-7 sm:py-6 [&amp;::-webkit-details-marker]:hidden">
+            <span class="min-w-0">
+              <span
+                class="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#99602F] dark:text-[#E6AC78]">Full
+                café selection · 6 more choices</span>
+              <span class="mt-1 block font-['Playfair_Display'] text-xl font-semibold sm:text-2xl">Explore More Bakes &
+                Bites</span>
+              <span class="mt-1 block text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">More savoury snacks and
+                bakery favourites for your coffee break.</span>
+            </span>
+            <span aria-hidden="true"
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#251B16] text-xl text-white transition-transform duration-300 group-open:rotate-180 dark:bg-[#B77946] dark:text-[#251B16]">⌄</span>
+          </summary>
+          <div class="border-t border-[#D9C5AA] px-4 pb-5 pt-5 dark:border-[#60483A] sm:px-6 sm:pb-6">
+            <ul class="grid min-w-0 gap-3 lg:grid-cols-2" aria-label="Explore More Bakes &amp; Bites">
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Garlic Bread</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹160</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Toasted golden with herbed
+                    butter.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Cheese Garlic Bread</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Crisp bread with melty cheese.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Paneer Tikka Sandwich</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹255</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Smoky paneer in toasted bread.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Pesto Veggie Sandwich</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹265</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Fresh vegetables with basil
+                    pesto.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Grilled Veggie Wrap</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹235</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A warm wrap with crunchy
+                    vegetables.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Blueberry Muffin</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹165</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Soft, golden and bursting with
+                    berries.</p>
+                </div>
+              </li>
+            </ul>
+            <p class="mt-5 text-center text-xs leading-6 text-[#59483B] dark:text-[#E9DACA]">All prices are illustrative
+              for this fictional café concept.</p>
+          </div>
+        </details>
+        <!-- Expanded café options: native HTML details/summary, no custom JavaScript. -->
+        <details id="desserts"
+          class="group mt-9 overflow-hidden rounded-[1.75rem] border border-[#D9C5AA] bg-[#FFF9F1]/70 shadow-sm open:shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]/60">
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 transition-colors hover:bg-[#F0DFCA]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#B77946] dark:hover:bg-[#493429]/80 sm:px-7 sm:py-6 [&amp;::-webkit-details-marker]:hidden">
+            <span class="min-w-0">
+              <span
+                class="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#99602F] dark:text-[#E6AC78]">The
+                dessert menu · 10 more choices</span>
+              <span class="mt-1 block font-['Playfair_Display'] text-xl font-semibold sm:text-2xl">Explore More
+                Desserts</span>
+              <span class="mt-1 block text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">From tiramisu to warm
+                brownies — find your sweet finish.</span>
+            </span>
+            <span aria-hidden="true"
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#251B16] text-xl text-white transition-transform duration-300 group-open:rotate-180 dark:bg-[#B77946] dark:text-[#251B16]">⌄</span>
+          </summary>
+          <div class="border-t border-[#D9C5AA] px-4 pb-5 pt-5 dark:border-[#60483A] sm:px-6 sm:pb-6">
+            <ul class="grid min-w-0 gap-3 lg:grid-cols-2" aria-label="Explore More Desserts">
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Classic Tiramisu</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹275</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Coffee-soaked layers and
+                    mascarpone cream.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Fudgy Chocolate Brownie</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Deep chocolate with a soft
+                    centre.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Brownie with Ice Cream</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹265</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Warm brownie topped with vanilla
+                    ice cream.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Blueberry Cheesecake</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹285</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Creamy cheesecake with berry
+                    topping.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Red Velvet Slice</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹255</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Soft red velvet with cream cheese
+                    frosting.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Banoffee Pie</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹245</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Banana, toffee and whipped cream.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Cinnamon Roll</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Warm cinnamon swirls with sweet
+                    glaze.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Lemon Tart</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹225</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Bright lemon curd in a buttery
+                    crust.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Chocolate Mousse</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹235</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Light, airy and richly
+                    chocolatey.</p>
+                </div>
+              </li>
+              <li
+                class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Caramel Panna Cotta</h3>
+                    <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹245</span>
+                  </div>
+                  <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Silky vanilla cream with caramel.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <p class="mt-5 text-center text-xs leading-6 text-[#59483B] dark:text-[#E9DACA]">All prices are illustrative
+              for this fictional café concept.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+    <!-- FEATURED PAIRING: FLEX + EDITORIAL SPLIT -->
+    <section aria-labelledby="pairing-title" class="scroll-mt-8 py-16 sm:py-20 lg:py-24" id="pairing">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
+        <div class="overflow-hidden rounded-[2rem]">
+          <img alt="A quiet café reading corner where guests can enjoy books and coffee"
+            class="h-[330px] w-full object-cover sm:h-[440px] lg:h-[500px]" decoding="async" height="950" loading="lazy"
+            src="assets/images/Home Page/reading-corner.jpeg" width="900" />
+        </div>
+        <div>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">A Little
+            Recommendation</p>
+          <h2 class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl"
+            id="pairing-title">One Cup. <span class="text-[#99602F] dark:text-[#E6AC78]">One More Chapter.</span></h2>
+          <p class="mt-6 text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">Our favourite imaginary pairing? A warm
+            cappuccino, a buttery croissant and a novel you can't put down. Some afternoons are best enjoyed slowly.</p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <span
+              class="rounded-full bg-[#EADBC7] px-4 py-2 text-sm font-semibold text-[#4C3426] dark:bg-[#493429] dark:text-[#F5EBDD]">☕
+              Cappuccino</span>
+            <span
+              class="rounded-full bg-[#EADBC7] px-4 py-2 text-sm font-semibold text-[#4C3426] dark:bg-[#493429] dark:text-[#F5EBDD]">🥐
+              Croissant</span>
+            <span
+              class="rounded-full bg-[#EADBC7] px-4 py-2 text-sm font-semibold text-[#4C3426] dark:bg-[#493429] dark:text-[#F5EBDD]">📖
+              Your Next Read</span>
+          </div>
+          <a class="mt-9 inline-flex rounded-full bg-[#251B16] px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]"
+            href="events.html">Discover Our Book Club <span aria-hidden="true" class="ml-2">→</span></a>
+        </div>
+      </div>
+    </section>
+    <!-- VISIT / CTA -->
+    <section aria-labelledby="menu-visit-title" class="bg-[#251B16] py-16 text-[#F5EBDD] sm:py-20">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
+        <div class="max-w-2xl">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#E6AC78]">Your Table Is Waiting</p>
+          <h2 class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl" id="menu-visit-title">
+            Good Coffee. Great Stories.</h2>
+          <p class="mt-5 leading-8 text-[#E9DACA]">Explore the concept, find the café details and imagine your next cozy
+            afternoon in Jaipur.</p>
+          <p class="mt-2 text-sm text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily.</p>
+        </div>
+        <a class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B77946] px-8 py-4 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          href="contact.html">Plan Your Visit <span aria-hidden="true" class="ml-2">→</span></a>
+      </div>
+    </section>
+    <p
+      class="bg-[#EADBC7] px-4 py-3 text-center text-xs leading-6 text-[#59483B] dark:bg-[#32241D] dark:text-[#E9DACA]">
+      Menu items and prices are illustrative, created for this fictional café website project.</p>
+  </main>
+  <!-- FOOTER -->
+  <footer class="bg-[#1B1410] text-[#F5EBDD]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
+      <div><a
+          class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="index.html">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a>
+        <p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good
+          conversations.</p>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2>
+        <ul class="mt-5 space-y-3">
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="index.html">Home</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="menu.html">Menu</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="gallery.html">Gallery</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="events.html">Events</a></li>
+          <li><a
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
+              href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2>
+        <p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br />Fictional business concept</p>
+        <p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a
+          class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
+          href="contact.html">Contact us <span aria-hidden="true">→</span></a>
+      </div>
     </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Espresso mellowed with hot water.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Caffè Latte</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹200</span>
+    <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6">
+      <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
     </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Silky milk with a balanced espresso shot.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Flat White</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Velvety microfoam and a bold coffee finish.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Café Mocha</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹230</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Espresso, chocolate and steamed milk.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Vanilla Latte</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹225</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A smooth latte with a hint of vanilla.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Caramel Macchiato</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹245</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Layered espresso with caramel notes.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Hazelnut Cappuccino</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹230</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Nutty aroma with a creamy foam cap.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Cold Brew</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹210</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Slow-steeped, chilled and naturally smooth.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Iced Spanish Latte</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹240</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A chilled espresso with creamy sweetness.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Affogato</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹250</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A shot of espresso over vanilla ice cream.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">South Indian Filter Coffee</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹130</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Aromatic, frothy and comforting.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Double Espresso</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹160</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Two rich shots for an extra kick.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Ginger Chai</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹115</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Classic chai warmed with fresh ginger.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Elaichi Chai</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹115</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Fragrant cardamom-infused milk tea.</p>
-  </div>
-</li>
-    </ul>
-    <p class="mt-5 text-center text-xs leading-6 text-[#59483B] dark:text-[#E9DACA]">All prices are illustrative for this fictional café concept.</p>
-  </div>
-</details>
-</div>
-</section>
-<!-- BAKES &AMP; BITES: RESPONSIVE CSS GRID -->
-<section aria-labelledby="bites-title" class="scroll-mt-8 py-16 sm:py-20 bg-[#EADBC7] dark:bg-[#32241D]" id="bites">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-<div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-<div class="max-w-2xl">
-<p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">The Menu / 02</p>
-<h2 class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl" id="bites-title">Bakes &amp; Bites</h2>
-<p class="mt-4 text-base leading-7 text-[#59483B] dark:text-[#E9DACA]">Freshly imagined café favourites to pair with your next chapter.</p>
-</div>
-<p class="font-['Playfair_Display'] text-lg italic text-[#99602F] dark:text-[#E6AC78]">A little something on the side.</p>
-</div>
-<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Golden flaky croissant served on a plate" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/croissant.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Bakery</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Butter Croissant</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹150</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Flaky, buttery layers that pair perfectly with coffee.</p>
-</div>
-</article>
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Slice of rich chocolate cake on a plate" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/chocolate-cake.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Dessert</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Chocolate Cake</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹220</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Rich chocolate comfort in every bite.</p>
-</div>
-</article>
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Toasted café sandwich with golden bread" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/sandwich.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Savory</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Grilled Sandwich</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹210</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Warm, crisp and filled with feel-good flavours.</p>
-</div>
-</article>
-<article class="group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#E5D5C0] bg-[#FFF9F1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-[#60483A] dark:bg-[#3B2B23]">
-<div class="relative overflow-hidden">
-<img alt="Slice of creamy cheesecake on a dessert plate" class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-60" decoding="async" height="650" loading="lazy" src="assets/images/Menu Page/cheesecake.jpeg" width="800"/>
-<span class="absolute left-4 top-4 rounded-full bg-[#FFF9F1]/95 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#70441F] shadow-sm">Dessert</span>
-</div>
-<div class="flex flex-1 flex-col p-5 sm:p-6">
-<div class="flex flex-wrap items-start justify-between gap-3">
-<h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug sm:text-2xl">Creamy Cheesecake</h3>
-<span class="shrink-0 rounded-full bg-[#F0DFCA] px-3 py-1 text-sm font-bold text-[#6E421F] dark:bg-[#5A3D2C] dark:text-[#F8D5B2]">₹240</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Silky, sweet and the perfect end to a chapter.</p>
-</div>
-</article>
-</div>
-<!-- Expanded café options: native HTML details/summary, no custom JavaScript. -->
-<details id="more-bakes" class="group mt-9 overflow-hidden rounded-[1.75rem] border border-[#D9C5AA] bg-[#FFF9F1]/70 shadow-sm open:shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]/60">
-  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 transition-colors hover:bg-[#F0DFCA]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#B77946] dark:hover:bg-[#493429]/80 sm:px-7 sm:py-6 [&amp;::-webkit-details-marker]:hidden">
-    <span class="min-w-0">
-      <span class="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#99602F] dark:text-[#E6AC78]">Full café selection · 6 more choices</span>
-      <span class="mt-1 block font-['Playfair_Display'] text-xl font-semibold sm:text-2xl">Explore More Bakes & Bites</span>
-      <span class="mt-1 block text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">More savoury snacks and bakery favourites for your coffee break.</span>
-    </span>
-    <span aria-hidden="true" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#251B16] text-xl text-white transition-transform duration-300 group-open:rotate-180 dark:bg-[#B77946] dark:text-[#251B16]">⌄</span>
-  </summary>
-  <div class="border-t border-[#D9C5AA] px-4 pb-5 pt-5 dark:border-[#60483A] sm:px-6 sm:pb-6">
-    <ul class="grid min-w-0 gap-3 lg:grid-cols-2" aria-label="Explore More Bakes &amp; Bites">
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Garlic Bread</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹160</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Toasted golden with herbed butter.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Cheese Garlic Bread</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Crisp bread with melty cheese.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Paneer Tikka Sandwich</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹255</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Smoky paneer in toasted bread.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Pesto Veggie Sandwich</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹265</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Fresh vegetables with basil pesto.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Grilled Veggie Wrap</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹235</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">A warm wrap with crunchy vegetables.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Blueberry Muffin</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹165</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Soft, golden and bursting with berries.</p>
-  </div>
-</li>
-    </ul>
-    <p class="mt-5 text-center text-xs leading-6 text-[#59483B] dark:text-[#E9DACA]">All prices are illustrative for this fictional café concept.</p>
-  </div>
-</details>
-<!-- Expanded café options: native HTML details/summary, no custom JavaScript. -->
-<details id="desserts" class="group mt-9 overflow-hidden rounded-[1.75rem] border border-[#D9C5AA] bg-[#FFF9F1]/70 shadow-sm open:shadow-lg dark:border-[#60483A] dark:bg-[#3B2B23]/60">
-  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 transition-colors hover:bg-[#F0DFCA]/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#B77946] dark:hover:bg-[#493429]/80 sm:px-7 sm:py-6 [&amp;::-webkit-details-marker]:hidden">
-    <span class="min-w-0">
-      <span class="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#99602F] dark:text-[#E6AC78]">The dessert menu · 10 more choices</span>
-      <span class="mt-1 block font-['Playfair_Display'] text-xl font-semibold sm:text-2xl">Explore More Desserts</span>
-      <span class="mt-1 block text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">From tiramisu to warm brownies — find your sweet finish.</span>
-    </span>
-    <span aria-hidden="true" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#251B16] text-xl text-white transition-transform duration-300 group-open:rotate-180 dark:bg-[#B77946] dark:text-[#251B16]">⌄</span>
-  </summary>
-  <div class="border-t border-[#D9C5AA] px-4 pb-5 pt-5 dark:border-[#60483A] sm:px-6 sm:pb-6">
-    <ul class="grid min-w-0 gap-3 lg:grid-cols-2" aria-label="Explore More Desserts">
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Classic Tiramisu</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹275</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Coffee-soaked layers and mascarpone cream.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Fudgy Chocolate Brownie</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Deep chocolate with a soft centre.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Brownie with Ice Cream</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹265</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Warm brownie topped with vanilla ice cream.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Blueberry Cheesecake</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹285</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Creamy cheesecake with berry topping.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Red Velvet Slice</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹255</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Soft red velvet with cream cheese frosting.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Banoffee Pie</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹245</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Banana, toffee and whipped cream.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Cinnamon Roll</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹195</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Warm cinnamon swirls with sweet glaze.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Lemon Tart</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹225</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Bright lemon curd in a buttery crust.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Chocolate Mousse</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹235</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Light, airy and richly chocolatey.</p>
-  </div>
-</li>
-<li class="flex min-w-0 flex-col gap-3 rounded-2xl border border-[#E5D5C0] bg-[#FFF9F1] p-4 shadow-sm transition-shadow hover:shadow-md dark:border-[#60483A] dark:bg-[#3B2B23] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
-  <div class="min-w-0 flex-1">
-    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <h3 class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Caramel Panna Cotta</h3>
-      <span class="font-bold text-[#865127] dark:text-[#F1C092]">₹245</span>
-    </div>
-    <p class="mt-1 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Silky vanilla cream with caramel.</p>
-  </div>
-</li>
-    </ul>
-    <p class="mt-5 text-center text-xs leading-6 text-[#59483B] dark:text-[#E9DACA]">All prices are illustrative for this fictional café concept.</p>
-  </div>
-</details>
-</div>
-</section>
-<!-- FEATURED PAIRING: FLEX + EDITORIAL SPLIT -->
-<section aria-labelledby="pairing-title" class="scroll-mt-8 py-16 sm:py-20 lg:py-24" id="pairing">
-<div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
-<div class="overflow-hidden rounded-[2rem]">
-<img alt="A quiet café reading corner where guests can enjoy books and coffee" class="h-[330px] w-full object-cover sm:h-[440px] lg:h-[500px]" decoding="async" height="950" loading="lazy" src="assets/images/Home Page/reading-corner.jpeg" width="900"/>
-</div>
-<div>
-<p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#99602F] dark:text-[#E6AC78]">A Little Recommendation</p>
-<h2 class="font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl" id="pairing-title">One Cup. <span class="text-[#99602F] dark:text-[#E6AC78]">One More Chapter.</span></h2>
-<p class="mt-6 text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">Our favourite imaginary pairing? A warm cappuccino, a buttery croissant and a novel you can't put down. Some afternoons are best enjoyed slowly.</p>
-<div class="mt-7 flex flex-wrap gap-3">
-<span class="rounded-full bg-[#EADBC7] px-4 py-2 text-sm font-semibold text-[#4C3426] dark:bg-[#493429] dark:text-[#F5EBDD]">☕ Cappuccino</span>
-<span class="rounded-full bg-[#EADBC7] px-4 py-2 text-sm font-semibold text-[#4C3426] dark:bg-[#493429] dark:text-[#F5EBDD]">🥐 Croissant</span>
-<span class="rounded-full bg-[#EADBC7] px-4 py-2 text-sm font-semibold text-[#4C3426] dark:bg-[#493429] dark:text-[#F5EBDD]">📖 Your Next Read</span>
-</div>
-<a class="mt-9 inline-flex rounded-full bg-[#251B16] px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]" href="events.html">Discover Our Book Club <span aria-hidden="true" class="ml-2">→</span></a>
-</div>
-</div>
-</section>
-<!-- VISIT / CTA -->
-<section aria-labelledby="menu-visit-title" class="bg-[#251B16] py-16 text-[#F5EBDD] sm:py-20">
-<div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10">
-<div class="max-w-2xl">
-<p class="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#E6AC78]">Your Table Is Waiting</p>
-<h2 class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl lg:text-5xl" id="menu-visit-title">Good Coffee. Great Stories.</h2>
-<p class="mt-5 leading-8 text-[#E9DACA]">Explore the concept, find the café details and imagine your next cozy afternoon in Jaipur.</p>
-<p class="mt-2 text-sm text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily.</p>
-</div>
-<a class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B77946] px-8 py-4 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="contact.html">Plan Your Visit <span aria-hidden="true" class="ml-2">→</span></a>
-</div>
-</section>
-<p class="bg-[#EADBC7] px-4 py-3 text-center text-xs leading-6 text-[#59483B] dark:bg-[#32241D] dark:text-[#E9DACA]">Menu items and prices are illustrative, created for this fictional café website project.</p>
-</main>
-<!-- FOOTER -->
-<footer class="bg-[#1B1410] text-[#F5EBDD]">
-<div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-<div><a class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="index.html">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai.</a><p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good conversations.</p></div>
-<div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2><ul class="mt-5 space-y-3"><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="index.html">Home</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="menu.html">Menu</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="gallery.html">Gallery</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="events.html">Events</a></li><li><a class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]" href="contact.html">Contact</a></li></ul></div>
-<div><h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2><p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br/>Fictional business concept</p><p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]" href="contact.html">Contact us <span aria-hidden="true">→</span></a></div>
-</div>
-<div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6"><p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p></div>
-</footer>
+  </footer>
+  <script>
+    // Keep the hero image visible behind the navbar until the page is scrolled.
+    (() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
+      updateHeader(); // Handles page refreshes and direct links to page sections.
+      window.addEventListener('scroll', updateHeader, { passive: true });
+    })();
+  </script>
 </body>
+
 </html>
