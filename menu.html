@@ -35,20 +35,44 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
     rel="stylesheet" />
-  <!-- Navbar stays transparent over the hero, then gains contrast when scrolling. -->
+  <!-- CSS-only navbar: transparent on the hero, dark and blurred after scrolling. -->
   <style>
+    /* Safe fallback for browsers without CSS scroll-driven animations. */
     .site-header {
-      background-color: transparent;
-      transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
-    }
-    .site-header.is-scrolled {
       background-color: rgba(37, 27, 22, 0.95);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
     }
+
+    /* Chrome / other supporting browsers: same scroll behaviour, no custom JS. */
+    @supports (animation-timeline: scroll()) {
+      @keyframes chapter-chai-header-scroll {
+        from {
+          background-color: rgba(37, 27, 22, 0);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0);
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+        }
+        to {
+          background-color: rgba(37, 27, 22, 0.95);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+          -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+        }
+      }
+
+      .site-header {
+        animation: chapter-chai-header-scroll linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 20px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .site-header { transition: none; }
+      .site-header {
+        animation-timing-function: steps(1, end);
+      }
     }
   </style>
 </head>
@@ -700,16 +724,6 @@
       <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
     </div>
   </footer>
-  <script>
-    // Keep the hero image visible behind the navbar until the page is scrolled.
-    (() => {
-      const header = document.querySelector('.site-header');
-      if (!header) return;
-      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
-      updateHeader(); // Handles page refreshes and direct links to page sections.
-      window.addEventListener('scroll', updateHeader, { passive: true });
-    })();
-  </script>
 </body>
 
 </html>
