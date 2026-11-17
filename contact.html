@@ -34,23 +34,47 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
     rel="stylesheet">
-  <!-- Navbar stays transparent over the hero, then gains contrast when scrolling. -->
+  <!-- CSS-only navbar: transparent on the hero, dark and blurred after scrolling. -->
   <style>
-    .site-header {
-      background-color: transparent;
-      transition: background-color 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
-    }
+    /* Native HTML demo form confirmation: revealed only after valid submission. */
+    #demo-confirmation { display: none; }
+    #demo-confirmation:target { display: block; }
 
-    .site-header.is-scrolled {
+    /* Safe fallback for browsers without CSS scroll-driven animations. */
+    .site-header {
       background-color: rgba(37, 27, 22, 0.95);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
     }
 
+    /* Chrome / other supporting browsers: same scroll behaviour, no custom JS. */
+    @supports (animation-timeline: scroll()) {
+      @keyframes chapter-chai-header-scroll {
+        from {
+          background-color: rgba(37, 27, 22, 0);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0);
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+        }
+        to {
+          background-color: rgba(37, 27, 22, 0.95);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+          -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+        }
+      }
+
+      .site-header {
+        animation: chapter-chai-header-scroll linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 20px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .site-header {
-        transition: none;
+        animation-timing-function: steps(1, end);
       }
     }
   </style>
@@ -180,19 +204,19 @@
         </div>
         <div class="grid gap-16 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.8fr)] lg:gap-24">
           <div class="min-w-0">
-            <form id="contact-demo-form" class="space-y-8" aria-describedby="demo-form-note" action="#write-to-us" method="post">
+            <form id="contact-demo-form" action="contact.html#demo-confirmation" method="get" class="space-y-8" aria-describedby="demo-form-note">
               <div class="grid gap-8 sm:grid-cols-2">
                 <div>
                   <label for="full-name" class="mb-2 block text-sm font-semibold">Your name <span
                       class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                  <input id="full-name" name="full_name" type="text" autocomplete="name" required maxlength="100"
+                  <input id="full-name" type="text" autocomplete="name" required maxlength="100"
                     placeholder="Full name"
                     class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
                 </div>
                 <div>
                   <label for="phone" class="mb-2 block text-sm font-semibold">Phone number <span
                       class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                  <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25"
+                  <input id="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25"
                     placeholder="Your phone number"
                     class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
                 </div>
@@ -200,14 +224,14 @@
               <div>
                 <label for="email" class="mb-2 block text-sm font-semibold">Email address <span
                     class="font-normal text-[#756352] dark:text-[#C6B7A8]">(optional)</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" maxlength="150"
+                <input id="email" type="email" autocomplete="email" maxlength="150"
                   placeholder="you@example.com"
                   class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
               </div>
               <div>
                 <label for="enquiry" class="mb-2 block text-sm font-semibold">What is this about? <span
                     class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                <select id="enquiry" name="enquiry" required
+                <select id="enquiry" required
                   class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:bg-[#2E211B] dark:text-[#F5EBDD] dark:focus:border-[#E6AC78]">
                   <option value="" disabled selected>Choose an enquiry</option>
                   <option value="general">General enquiry</option>
@@ -220,18 +244,18 @@
               <div>
                 <label for="message" class="mb-2 block text-sm font-semibold">Your message <span
                     class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                <textarea id="message" name="message" rows="4" minlength="10" maxlength="2000" required
+                <textarea id="message" rows="4" minlength="10" maxlength="2000" required
                   placeholder="Tell us what's on your mind..."
                   class="w-full min-w-0 resize-y rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]"></textarea>
               </div>
-              <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required
-                fields. This is an interactive demo for a fictional café. Submitting checks your entries and shows a
-                confirmation on this page only. No message is sent, stored or shared.</p>
+              <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required fields use built-in HTML validation. This is a demonstration only: no message will be sent or saved.</p>
               <button type="submit" aria-describedby="demo-form-note"
-                class="inline-flex items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] transition-colors hover:bg-[#553B2C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78] dark:focus-visible:outline-[#E6AC78]">Submit demo message <span aria-hidden="true">↗</span></button>
-              <p id="demo-form-status" role="status" aria-live="polite" aria-atomic="true"
-                class="hidden max-w-lg rounded-xl border border-[#BFA78E] bg-[#F5EBDD] px-5 py-4 text-sm leading-6 text-[#251B16] dark:border-[#7A6050] dark:bg-[#382820] dark:text-[#F5EBDD]"></p>
+                class="inline-flex items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] transition-colors hover:bg-[#553B2C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78] dark:focus-visible:outline-[#E6AC78]">Send Demo Message <span aria-hidden="true">↗</span></button>
             </form>
+            <div id="demo-confirmation" tabindex="-1" role="status" class="mt-6 hidden scroll-mt-28 rounded-2xl border border-[#B77946] bg-[#F0DFCA] px-5 py-4 text-sm leading-7 text-[#251B16] target:block dark:bg-[#463329] dark:text-[#F5EBDD]">
+              <strong class="block font-semibold">Demo form completed!</strong>
+              Your details passed the browser's HTML validation. This is only a preview; no message was sent or saved.
+            </div>
           </div>
           <aside aria-label="Visit information" class="min-w-0">
             <figure class="overflow-hidden rounded-t-[8rem] rounded-b-xl">
@@ -364,40 +388,6 @@
       <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
     </div>
   </footer>
-  <script>
-    // Frontend-only demo: native browser validation runs before the submit event.
-    // Do not transmit, log or persist any of the visitor's form entries.
-    (() => {
-      const form = document.getElementById('contact-demo-form');
-      const status = document.getElementById('demo-form-status');
-      if (!form || !status) return;
-
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        status.textContent = 'Demo submitted successfully! Your form passed validation. This is a fictional café, so no message was sent or saved.';
-        status.classList.remove('hidden');
-        form.reset();
-      });
-
-      form.addEventListener('input', () => {
-        status.classList.add('hidden');
-        status.textContent = '';
-      });
-      form.addEventListener('change', () => {
-        status.classList.add('hidden');
-        status.textContent = '';
-      });
-    })();
-
-    // Keep the hero image visible behind the navbar until the page is scrolled.
-    (() => {
-      const header = document.querySelector('.site-header');
-      if (!header) return;
-      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
-      updateHeader(); // Handles page refreshes and direct links to page sections.
-      window.addEventListener('scroll', updateHeader, { passive: true });
-    })();
-  </script>
 </body>
 
 </html>
