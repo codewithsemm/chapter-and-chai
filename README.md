@@ -77,6 +77,9 @@ The screenshot paths below are retained from the earlier README. They will displ
 ### Events
 ![Events page](screenshots/events.png)
 
+### About Us
+![About Us page](screenshots/about.png)
+
 ### Contact
 ![Contact page](screenshots/contact.png)
 
