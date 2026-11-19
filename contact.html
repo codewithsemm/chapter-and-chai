@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Reach out to Chapter & Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
+    content="Reach out to Chapter & Chai, a fictional Jaipur book café concept. Enquiries, sample hours and an illustrative C-Scheme location map.">
   <meta name="theme-color" content="#251B16">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Contact | Chapter & Chai — Let's Talk Over Chai</title>
@@ -16,7 +16,7 @@
   <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Contact | Chapter &amp; Chai — Let&#x27;s Talk Over Chai">
   <meta property="og:description"
-    content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
+    content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and an illustrative C-Scheme location map.">
   <meta property="og:url" content="https://chapter-and-chai.vercel.app/contact.html">
   <meta property="og:image"
     content="https://chapter-and-chai.vercel.app/assets/images/Gallery%20Page/gallery-interior.jpeg">
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact | Chapter &amp; Chai — Let&#x27;s Talk Over Chai">
   <meta name="twitter:description"
-    content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and Jaipur city map.">
+    content="Reach out to Chapter &amp; Chai, a fictional Jaipur book café concept. Enquiries, sample hours and an illustrative C-Scheme location map.">
   <meta name="twitter:image"
     content="https://chapter-and-chai.vercel.app/assets/images/Gallery%20Page/gallery-interior.jpeg">
   <!-- End SEO and social sharing metadata -->
@@ -37,8 +37,13 @@
   <!-- CSS-only navbar: transparent on the hero, dark and blurred after scrolling. -->
   <style>
     /* Native HTML demo form confirmation: revealed only after valid submission. */
-    #demo-confirmation { display: none; }
-    #demo-confirmation:target { display: block; }
+    #demo-confirmation {
+      display: none;
+    }
+
+    #demo-confirmation:target {
+      display: block;
+    }
 
     /* Safe fallback for browsers without CSS scroll-driven animations. */
     .site-header {
@@ -57,6 +62,7 @@
           -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
         }
+
         to {
           background-color: rgba(37, 27, 22, 0.95);
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -77,6 +83,172 @@
         animation-timing-function: steps(1, end);
       }
     }
+
+
+    /* Milestone 1 polish: subtle CSS-only hover interactions. */
+    main article,
+    main figure.group {
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+
+    main article img,
+    main figure.group img {
+      transition: transform 450ms ease;
+    }
+
+    main a.rounded-full,
+    main button.rounded-full,
+    .site-header nav>a.rounded-full {
+      transition: transform 250ms ease, box-shadow 250ms ease,
+        background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+    }
+
+    footer a[aria-label^="Instagram"],
+    footer a[aria-label^="Facebook"],
+    footer a[aria-label^="YouTube"] {
+      transition: transform 250ms ease, background-color 250ms ease,
+        border-color 250ms ease, color 250ms ease;
+    }
+
+    /* A gentle lift for desktop navigation links. */
+    .site-header nav>div.hidden>a {
+      display: inline-block;
+      transition: transform 220ms ease, color 220ms ease;
+    }
+
+    /* Hover only on devices with a real mouse/trackpad. */
+    @media (hover: hover) and (pointer: fine) {
+      .site-header nav>div.hidden>a:hover {
+        transform: translateY(-2px);
+      }
+
+      main article:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(37, 27, 22, 0.12);
+      }
+
+      main article:hover img {
+        transform: scale(1.035);
+      }
+
+      main figure.group:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(37, 27, 22, 0.18);
+      }
+
+      /* Existing gallery image zoom remains intact. */
+      main a.rounded-full:hover,
+      main button.rounded-full:hover,
+      .site-header nav>a.rounded-full:hover {
+        transform: translateY(-2px) scale(1.025);
+        box-shadow: 0 8px 18px rgba(37, 27, 22, 0.15);
+      }
+
+      footer a[aria-label^="Instagram"]:hover,
+      footer a[aria-label^="Facebook"]:hover,
+      footer a[aria-label^="YouTube"]:hover {
+        transform: translateY(-2px) scale(1.08);
+      }
+    }
+
+    /* Accessible motion setting: no hover motion or forced image zoom. */
+    @media (prefers-reduced-motion: reduce) {
+
+      .site-header nav>div.hidden>a,
+      main article,
+      main article img,
+      main figure.group,
+      main figure.group img,
+      main a.rounded-full,
+      main button.rounded-full,
+      .site-header nav>a.rounded-full,
+      footer a[aria-label^="Instagram"],
+      footer a[aria-label^="Facebook"],
+      footer a[aria-label^="YouTube"] {
+        transition: none !important;
+        transform: none !important;
+      }
+    }
+  
+
+    /* Chapter & Chai: coordinated hero and mobile navigation motion — CSS only. */
+    @keyframes cc-hero-drift {
+      from { transform: scale(1.015); }
+      to { transform: scale(1.085); }
+    }
+    @keyframes cc-hero-rise {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cc-hero-photo {
+      animation: cc-hero-drift 18s ease-in-out infinite alternate;
+      transform-origin: center center;
+      will-change: transform;
+    }
+    .cc-hero-in-1, .cc-hero-in-2, .cc-hero-in-3, .cc-hero-in-4 {
+      animation: cc-hero-rise 760ms cubic-bezier(.2,.75,.25,1) both;
+    }
+    .cc-hero-in-1 { animation-delay: 100ms; }
+    .cc-hero-in-2 { animation-delay: 240ms; }
+    .cc-hero-in-3 { animation-delay: 390ms; }
+    .cc-hero-in-4 { animation-delay: 540ms; }
+
+    /* Native <details> keeps the hamburger keyboard-friendly and JS-free. */
+    .cc-mobile-menu > .cc-menu-trigger {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+    }
+    .cc-mobile-menu > .cc-menu-trigger::-webkit-details-marker { display: none; }
+    .cc-menu-icon {
+      display: inline-flex;
+      width: 18px;
+      height: 16px;
+      flex: 0 0 18px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cc-menu-icon > span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background: currentColor;
+      transform-origin: center;
+      transition: transform 260ms ease, opacity 200ms ease;
+    }
+    .cc-mobile-menu[open] .cc-menu-icon > span:first-child { transform: translateY(7px) rotate(45deg); }
+    .cc-mobile-menu[open] .cc-menu-icon > span:nth-child(2) { opacity: 0; transform: scaleX(.35); }
+    .cc-mobile-menu[open] .cc-menu-icon > span:last-child { transform: translateY(-7px) rotate(-45deg); }
+    .cc-menu-panel { transform-origin: top right; }
+    @keyframes cc-menu-drop {
+      from { opacity: 0; transform: translateY(-10px) scale(.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .cc-mobile-menu[open] > .cc-menu-panel {
+      animation: cc-menu-drop 260ms cubic-bezier(.2,.75,.25,1) both;
+    }
+    /* Where supported, keep the native details content visible until the close fade finishes. */
+    @supports selector(details::details-content) {
+      .cc-mobile-menu::details-content {
+        opacity: 0;
+        transition: opacity 220ms ease, content-visibility 220ms allow-discrete;
+      }
+      .cc-mobile-menu[open]::details-content { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cc-hero-photo, .cc-hero-in-1, .cc-hero-in-2, .cc-hero-in-3, .cc-hero-in-4,
+      .cc-mobile-menu[open] > .cc-menu-panel {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        will-change: auto;
+      }
+      .cc-menu-icon > span { transition: none !important; }
+      .cc-mobile-menu::details-content { transition: none !important; }
+    }
   </style>
 </head>
 
@@ -90,8 +262,10 @@
       <a aria-label="Chapter and Chai, home"
         class="inline-flex items-center gap-2 shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl"
         href="index.html">
-        <img src="assets/images/logo/chapter-and-chai-mark.webp" alt="" aria-hidden="true" width="44" height="44" decoding="async" class="h-9 w-9 shrink-0 object-contain sm:h-11 sm:w-11">
-        <span class="whitespace-nowrap">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span class="text-[#E6AC78]">.</span></span>
+        <img src="assets/images/logo/chapter-and-chai-mark.webp" alt="" aria-hidden="true" width="44" height="44"
+          decoding="async" class="h-9 w-9 shrink-0 object-contain sm:h-11 sm:w-11">
+        <span class="whitespace-nowrap">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span
+            class="text-[#E6AC78]">.</span></span>
       </a>
       <div class="hidden items-center gap-6 md:flex lg:gap-8">
         <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
@@ -102,18 +276,20 @@
           href="gallery.html">Gallery</a>
         <a class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
           href="events.html">Events</a>
+        <a href="about.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">About Us</a>
         <a aria-current="page"
           class="border-b-2 border-[#E6AC78] pb-1 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
           href="contact.html">Contact</a>
       </div>
       <a class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex"
         href="contact.html">Plan Your Visit</a>
-      <details class="relative md:hidden">
+      <details class="cc-mobile-menu relative md:hidden">
         <summary
-          class="cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
-          Menu <span aria-hidden="true">☰</span></summary>
+          class="cc-menu-trigger cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
+          Menu <span class="cc-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></summary>
         <div
-          class="absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
+          class="cc-menu-panel absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
           <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
             href="index.html">Home</a>
           <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
@@ -122,6 +298,8 @@
             href="gallery.html">Gallery</a>
           <a class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
             href="events.html">Events</a>
+          <a href="about.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">About Us</a>
           <a aria-current="page"
             class="rounded-lg bg-white/10 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
             href="contact.html">Contact</a>
@@ -141,14 +319,14 @@
       <div
         class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-32 sm:px-6 sm:pb-20 sm:pt-36 lg:min-h-[660px] lg:grid-cols-[minmax(0,1fr)_minmax(0,0.94fr)] lg:gap-14 lg:px-10 lg:pb-24 lg:pt-36">
         <div class="relative z-10 min-w-0 max-w-[600px]">
-          <p class="mb-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.23em] text-[#E6AC78]"><span
+          <p class="mb-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.23em] text-[#E6AC78] cc-hero-in-1"><span
               aria-hidden="true" class="h-px w-9 bg-[#B77946]"></span> Chapter &amp; Chai / Contact</p>
           <h1 id="contact-title"
-            class="font-['Playfair_Display'] text-[clamp(3.4rem,6.4vw,6.5rem)] font-semibold leading-[1.04] tracking-[-0.045em]">
+            class="font-['Playfair_Display'] text-[clamp(3.4rem,6.4vw,6.5rem)] font-semibold leading-[1.04] tracking-[-0.045em] cc-hero-in-2">
             Let's talk <span class="block italic font-medium text-[#E6AC78]">over chai.</span></h1>
-          <p class="mt-8 max-w-[460px] text-base leading-8 text-[#EADBCB] sm:text-lg">A question, a book recommendation,
+          <p class="mt-8 max-w-[460px] text-base leading-8 text-[#EADBCB] sm:text-lg cc-hero-in-3">A question, a book recommendation,
             or an idea for our next gathering? We'd love to hear your story.</p>
-          <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5">
+          <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5 cc-hero-in-4">
             <a href="#write-to-us"
               class="inline-flex items-center justify-center gap-4 rounded-full bg-[#B77946] px-7 py-4 text-sm font-semibold text-[#251B16] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Write
               to us <span aria-hidden="true">↗</span></a>
@@ -167,7 +345,7 @@
             class="relative h-[350px] w-full overflow-hidden rounded-t-[9rem] rounded-b-[1.5rem] border border-[#B77946]/35 bg-[#493024] shadow-[0_24px_65px_-24px_rgba(0,0,0,0.45)] sm:h-[425px] lg:h-[450px]">
             <img src="assets/images/Gallery Page/gallery-interior.jpeg"
               alt="Warmly lit café interior with wooden tables, pendant lamps and comfortable seating" width="900"
-              height="1100" fetchpriority="high" class="h-full w-full object-cover object-center" />
+              height="1100" fetchpriority="high" class="h-full w-full object-cover object-center cc-hero-photo" />
             <div aria-hidden="true"
               class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#251B16]/65 to-transparent"></div>
             <figcaption
@@ -204,13 +382,13 @@
         </div>
         <div class="grid gap-16 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.8fr)] lg:gap-24">
           <div class="min-w-0">
-            <form id="contact-demo-form" action="contact.html#demo-confirmation" method="get" class="space-y-8" aria-describedby="demo-form-note">
+            <form id="contact-demo-form" action="contact.html#demo-confirmation" method="get" class="space-y-8"
+              aria-describedby="demo-form-note">
               <div class="grid gap-8 sm:grid-cols-2">
                 <div>
                   <label for="full-name" class="mb-2 block text-sm font-semibold">Your name <span
                       class="text-[#A66B3F] dark:text-[#E6AC78]">*</span></label>
-                  <input id="full-name" type="text" autocomplete="name" required maxlength="100"
-                    placeholder="Full name"
+                  <input id="full-name" type="text" autocomplete="name" required maxlength="100" placeholder="Full name"
                     class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
                 </div>
                 <div>
@@ -224,8 +402,7 @@
               <div>
                 <label for="email" class="mb-2 block text-sm font-semibold">Email address <span
                     class="font-normal text-[#756352] dark:text-[#C6B7A8]">(optional)</span></label>
-                <input id="email" type="email" autocomplete="email" maxlength="150"
-                  placeholder="you@example.com"
+                <input id="email" type="email" autocomplete="email" maxlength="150" placeholder="you@example.com"
                   class="w-full min-w-0 rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]" />
               </div>
               <div>
@@ -248,11 +425,14 @@
                   placeholder="Tell us what's on your mind..."
                   class="w-full min-w-0 resize-y rounded-none border-0 border-b border-[#BFA78E] bg-transparent px-0 py-3 text-[#251B16] placeholder:text-[#807263] focus:border-[#99602F] focus:outline-none focus:ring-0 dark:border-[#7A6050] dark:text-[#F5EBDD] dark:placeholder:text-[#BFAE9F] dark:focus:border-[#E6AC78]"></textarea>
               </div>
-              <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required fields use built-in HTML validation. This is a demonstration only: no message will be sent or saved.</p>
+              <p id="demo-form-note" class="max-w-lg text-xs leading-6 text-[#756352] dark:text-[#D5C6B8]">* Required
+                fields use built-in HTML validation. This is a demonstration only: no message will be sent or saved.</p>
               <button type="submit" aria-describedby="demo-form-note"
-                class="inline-flex items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] transition-colors hover:bg-[#553B2C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78] dark:focus-visible:outline-[#E6AC78]">Send Demo Message <span aria-hidden="true">↗</span></button>
+                class="inline-flex items-center justify-center gap-3 rounded-full bg-[#251B16] px-8 py-4 text-sm font-semibold text-[#F5EBDD] transition-colors hover:bg-[#553B2C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78] dark:focus-visible:outline-[#E6AC78]">Send
+                Demo Message <span aria-hidden="true">↗</span></button>
             </form>
-            <div id="demo-confirmation" tabindex="-1" role="status" class="mt-6 hidden scroll-mt-28 rounded-2xl border border-[#B77946] bg-[#F0DFCA] px-5 py-4 text-sm leading-7 text-[#251B16] target:block dark:bg-[#463329] dark:text-[#F5EBDD]">
+            <div id="demo-confirmation" tabindex="-1" role="status"
+              class="mt-6 hidden scroll-mt-28 rounded-2xl border border-[#B77946] bg-[#F0DFCA] px-5 py-4 text-sm leading-7 text-[#251B16] target:block dark:bg-[#463329] dark:text-[#F5EBDD]">
               <strong class="block font-semibold">Demo form completed!</strong>
               Your details passed the browser's HTML validation. This is only a preview; no message was sent or saved.
             </div>
@@ -269,8 +449,9 @@
                 <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">01 / Our
                   city</p>
                 <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Rooted in Jaipur</h3>
-                <p class="mt-2 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Jaipur, Rajasthan, India. A
-                  fictional café concept, not an operating venue.</p>
+                <p class="mt-2 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Statue Circle, C-Scheme, Jaipur,
+                  Rajasthan 302001, India. An illustrative location for a fictional café concept, not an operating
+                  venue.</p>
               </div>
               <div class="py-6">
                 <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">02 /
@@ -288,7 +469,22 @@
                 </dl>
               </div>
               <div class="py-6">
-                <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">03 /
+                <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">03 / Get
+                  in touch</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Call or write</h3>
+                <p class="mt-3 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Phone (demo): <a
+                    href="tel:+910000000000"
+                    class="break-words underline decoration-[#B77946] underline-offset-4 hover:text-[#99602F] dark:hover:text-[#E6AC78]">+91
+                    00000 00000</a></p>
+                <p class="mt-2 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Email (demo): <a
+                    href="mailto:hello@chapterandchai.com"
+                    class="break-all underline decoration-[#B77946] underline-offset-4 hover:text-[#99602F] dark:hover:text-[#E6AC78]">hello@chapterandchai.com</a>
+                </p>
+                <p class="mt-2 text-xs leading-6 text-[#6A5748] dark:text-[#E9DACA]">Sample contact details, not active
+                  business channels.</p>
+              </div>
+              <div class="py-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.19em] text-[#99602F] dark:text-[#E6AC78]">04 /
                   Stay for the stories</p>
                 <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Community, always.</h3><a
                   href="events.html"
@@ -316,17 +512,23 @@
           <div class="mt-8 flex items-start gap-4 border-t border-[#C7A98A] pt-6 dark:border-[#6C5242]"><span
               class="mt-1 text-xl text-[#99602F] dark:text-[#E6AC78]" aria-hidden="true">⌖</span>
             <div>
-              <h3 class="font-['Playfair_Display'] text-xl font-semibold">Jaipur, Rajasthan</h3>
-              <p class="mt-1 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">This map highlights Jaipur city only.
-                Chapter &amp; Chai is a fictional project, not a real café address.</p>
+              <h3 class="font-['Playfair_Display'] text-xl font-semibold">Statue Circle, C-Scheme</h3>
+              <p class="mt-1 text-sm leading-7 text-[#6A5748] dark:text-[#E9DACA]">Jaipur, Rajasthan 302001, India. The
+                map highlights this real Jaipur landmark as an illustrative location only — Chapter &amp; Chai is not a
+                real café here.</p>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Statue%20Circle%2C%20C-Scheme%2C%20Jaipur%2C%20Rajasthan%20302001%2C%20India"
+                target="_blank" rel="noopener noreferrer"
+                class="mt-3 inline-flex border-b border-[#B77946] pb-1 text-sm font-semibold hover:text-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B77946] dark:hover:text-[#E6AC78]">Open
+                location in Google Maps <span aria-hidden="true" class="ml-2">↗</span></a>
             </div>
           </div>
         </div>
         <div
           class="min-w-0 overflow-hidden rounded-[1.5rem] border-[5px] border-[#FFF9F1] bg-[#FFF9F1] shadow-[0_28px_65px_-38px_rgba(37,27,22,0.55)] dark:border-[#6B5140] dark:bg-[#6B5140]">
-          <iframe title="Map of Jaipur city, Rajasthan, India — not a café address"
-            src="https://www.google.com/maps?q=Jaipur%2C%20Rajasthan%2C%20India&amp;output=embed" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+          <iframe
+            title="Map of Statue Circle, C-Scheme, Jaipur, Rajasthan 302001, India — illustrative landmark, not a café address"
+            src="https://www.google.com/maps?q=Statue%20Circle%2C%20C-Scheme%2C%20Jaipur%2C%20Rajasthan%20302001%2C%20India&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
             class="block h-[340px] w-full border-0 sm:h-[430px]"></iframe>
         </div>
       </div>
@@ -348,44 +550,97 @@
       </div>
     </section>
   </main>
+  <!-- FOOTER -->
   <footer class="bg-[#1B1410] text-[#F5EBDD]">
-    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-10">
-      <div><a
-          class="inline-block rounded-sm font-['Playfair_Display'] text-2xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
-          href="index.html"><img src="assets/images/logo/chapter-and-chai-logo.webp" alt="Chapter &amp; Chai — Books, Coffee, Conversations" width="640" height="640" loading="lazy" decoding="async" class="h-auto w-36 sm:w-44"></a>
+    <div class="mx-auto grid max-w-7xl gap-11 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:gap-14 lg:px-10">
+      <!-- Brand and social links -->
+      <div class="min-w-0">
+        <a href="index.html" aria-label="Chapter and Chai home"
+          class="inline-block rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+          <img src="assets/images/logo/chapter-and-chai-logo.webp"
+            alt="Chapter &amp; Chai — Books, Coffee, Conversations" width="640" height="640" loading="lazy"
+            decoding="async" class="h-auto w-36 sm:w-44">
+        </a>
         <p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy concept café for coffee lovers, bookworms and good
           conversations.</p>
+        <div class="mt-6">
+          <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Follow &amp; Connect</h2>
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            <a href="https://www.instagram.com/heyyyy.salman/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram — visit the creator's profile (opens in a new tab)" title="Instagram"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#B77946]/60 text-[#F5EBDD] transition-colors hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.7" cy="6.4" r="1" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook — demo link to Facebook homepage (opens in a new tab)" title="Facebook (demo)"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#B77946]/60 text-[#F5EBDD] transition-colors hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                <path
+                  d="M14.2 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2a22 22 0 0 0-2.5-.2c-2.5 0-4.2 1.5-4.2 4.3v2.5H8V13h2.8v8h3.4Z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="YouTube — demo link to YouTube homepage (opens in a new tab)" title="YouTube (demo)"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#B77946]/60 text-[#F5EBDD] transition-colors hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.8"></rect>
+                <path d="m10 9 6 3-6 3V9Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <div>
+      <!-- Internal navigation -->
+      <div class="min-w-0">
         <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2>
         <ul class="mt-5 space-y-3">
-          <li><a
-              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
-              href="index.html">Home</a></li>
-          <li><a
-              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
-              href="menu.html">Menu</a></li>
-          <li><a
-              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
-              href="gallery.html">Gallery</a></li>
-          <li><a
-              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
-              href="events.html">Events</a></li>
-          <li><a
-              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]"
-              href="contact.html">Contact</a></li>
+          <li><a href="index.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a>
+          </li>
+          <li><a href="menu.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a>
+          </li>
+          <li><a href="gallery.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a>
+          </li>
+          <li><a href="events.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a>
+          </li>
+          <li><a href="about.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">About Us</a>
+          </li>
+          <li><a href="contact.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a>
+          </li>
         </ul>
       </div>
-      <div>
+      <!-- Consistent location and contact details -->
+      <div class="min-w-0">
         <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2>
-        <p class="mt-5 leading-7 text-[#E9DACA]">Jaipur, Rajasthan, India<br />Fictional business concept</p>
-        <p class="mt-4 leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p><a
-          class="mt-4 inline-block border-b border-[#E6AC78] pb-1 font-semibold hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]"
-          href="contact.html">Contact us <span aria-hidden="true">→</span></a>
+        <address class="mt-5 not-italic leading-7 text-[#E9DACA]">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Statue%20Circle%2C%20C-Scheme%2C%20Jaipur%2C%20Rajasthan%20302001%2C%20India"
+            target="_blank" rel="noopener noreferrer"
+            class="underline decoration-[#B77946] underline-offset-4 hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">
+            Statue Circle, C-Scheme<br>Jaipur, Rajasthan 302001, India
+          </a>
+        </address>
+        <p class="mt-4 text-sm leading-7 text-[#E9DACA]">Phone: <a href="tel:+91982916724"
+            class="break-words underline decoration-[#B77946] underline-offset-4 hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">+91
+            9829166724</a></p>
+        <p class="mt-2 text-sm leading-7 text-[#E9DACA]">Email: <a href="mailto:hello@chapterandchai.com"
+            class="break-all underline decoration-[#B77946] underline-offset-4 hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">hello@chapterandchai.com</a>
+        </p>
+        <p class="mt-4 text-sm leading-7 text-[#E9DACA]">Sample hours: 9:00 AM – 10:00 PM daily</p>
       </div>
     </div>
     <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6">
-      <p>© 2026 Chapter &amp; Chai. A fictional café website created for Milestone 1.</p>
+      <p>© 2026 Chapter &amp; Chai. All Right Reserved.</p>
     </div>
   </footer>
 </body>

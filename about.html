@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-pt-24">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discover the story and vision behind Chapter &amp; Chai, a Jaipur book café where handcrafted coffee, thoughtful spaces and stories come together.">
+  <meta name="theme-color" content="#251B16">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>About Us | Chapter &amp; Chai — Our Story</title>
+  <!-- SEO and social sharing metadata -->
+  <link rel="canonical" href="https://chapter-and-chai.vercel.app/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chapter &amp; Chai">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="About Us | Chapter &amp; Chai — Our Story">
+  <meta property="og:description"
+    content="Discover the story and vision behind Chapter &amp; Chai, a Jaipur book café where handcrafted coffee, thoughtful spaces and stories come together.">
+  <meta property="og:url" content="https://chapter-and-chai.vercel.app/about.html">
+  <meta property="og:image" content="https://chapter-and-chai.vercel.app/assets/images/About%20Page/about-hero.jpeg">
+  <meta property="og:image:alt" content="Jaipur heritage architecture inspiring Chapter &amp; Chai">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Chapter &amp; Chai — Our Story">
+  <meta name="twitter:description"
+    content="Discover the story and vision behind Chapter &amp; Chai, a Jaipur book café where handcrafted coffee, thoughtful spaces and stories come together.">
+  <meta name="twitter:image" content="https://chapter-and-chai.vercel.app/assets/images/About%20Page/about-hero.jpeg">
+  <!-- End SEO and social sharing metadata -->
+
+  <!-- Tailwind Play CDN: suitable for this learning project; a compiled build is preferable for production. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS-only navbar: transparent on the hero, dark and blurred after scrolling. -->
+  <style>
+    /* Safe fallback for browsers without CSS scroll-driven animations. */
+    .site-header {
+      background-color: rgba(37, 27, 22, 0.95);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Chrome / other supporting browsers: same scroll behaviour, no custom JS. */
+    @supports (animation-timeline: scroll()) {
+      @keyframes chapter-chai-header-scroll {
+        from {
+          background-color: rgba(37, 27, 22, 0);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0);
+          -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+        }
+
+        to {
+          background-color: rgba(37, 27, 22, 0.95);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+          -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+        }
+      }
+
+      .site-header {
+        animation: chapter-chai-header-scroll linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header {
+        animation-timing-function: steps(1, end);
+      }
+    }
+
+
+    /* Milestone 1 polish: subtle CSS-only hover interactions. */
+    main article,
+    main figure.group {
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+
+    main article img,
+    main figure.group img {
+      transition: transform 450ms ease;
+    }
+
+    main a.rounded-full,
+    main button.rounded-full,
+    .site-header nav>a.rounded-full {
+      transition: transform 250ms ease, box-shadow 250ms ease,
+        background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+    }
+
+    footer a[aria-label^="Instagram"],
+    footer a[aria-label^="Facebook"],
+    footer a[aria-label^="YouTube"] {
+      transition: transform 250ms ease, background-color 250ms ease,
+        border-color 250ms ease, color 250ms ease;
+    }
+
+    /* A gentle lift for desktop navigation links. */
+    .site-header nav>div.hidden>a {
+      display: inline-block;
+      transition: transform 220ms ease, color 220ms ease;
+    }
+
+    /* Hover only on devices with a real mouse/trackpad. */
+    @media (hover: hover) and (pointer: fine) {
+      .site-header nav>div.hidden>a:hover {
+        transform: translateY(-2px);
+      }
+
+      main article:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(37, 27, 22, 0.12);
+      }
+
+      main article:hover img {
+        transform: scale(1.035);
+      }
+
+      main figure.group:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(37, 27, 22, 0.18);
+      }
+
+      /* Existing gallery image zoom remains intact. */
+      main a.rounded-full:hover,
+      main button.rounded-full:hover,
+      .site-header nav>a.rounded-full:hover {
+        transform: translateY(-2px) scale(1.025);
+        box-shadow: 0 8px 18px rgba(37, 27, 22, 0.15);
+      }
+
+      footer a[aria-label^="Instagram"]:hover,
+      footer a[aria-label^="Facebook"]:hover,
+      footer a[aria-label^="YouTube"]:hover {
+        transform: translateY(-2px) scale(1.08);
+      }
+    }
+
+    /* Accessible motion setting: no hover motion or forced image zoom. */
+    @media (prefers-reduced-motion: reduce) {
+
+      .site-header nav>div.hidden>a,
+      main article,
+      main article img,
+      main figure.group,
+      main figure.group img,
+      main a.rounded-full,
+      main button.rounded-full,
+      .site-header nav>a.rounded-full,
+      footer a[aria-label^="Instagram"],
+      footer a[aria-label^="Facebook"],
+      footer a[aria-label^="YouTube"] {
+        transition: none !important;
+        transform: none !important;
+      }
+    }
+
+    /* Home page: visually distinguish testimonials from the final visit CTA. */
+    .testimonials-section {
+      background-image: radial-gradient(ellipse at 50% 0%, rgba(183, 121, 70, 0.11), transparent 70%);
+      box-shadow: inset 0 12px 25px -22px rgba(37, 27, 22, 0.3),
+        inset 0 -12px 25px -22px rgba(37, 27, 22, 0.3);
+    }
+
+    .testimonials-section article {
+      border: 1px solid rgba(183, 121, 70, 0.22);
+      box-shadow: 0 8px 24px rgba(37, 27, 22, 0.11);
+    }
+
+    .visit-section {
+      background-image: linear-gradient(120deg, #251B16 0%, #1B1410 100%);
+      box-shadow: inset 0 16px 28px -24px rgba(0, 0, 0, 0.75);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .testimonials-section article:hover {
+        box-shadow: 0 20px 38px rgba(37, 27, 22, 0.22);
+      }
+    }
+
+    /* Distinguish the closing invitation from the dark footer. */
+    .about-visit-cta {
+      background: linear-gradient(120deg, #523727 0%, #3F2B22 52%, #30221B 100%);
+      border-bottom: 1px solid rgba(230, 172, 120, 0.34);
+      box-shadow: inset 0 1px 0 rgba(230, 172, 120, 0.12);
+    }
+
+    /* About Us — editorial, motion-rich design with no custom JavaScript. */
+    html { scroll-behavior: smooth; }
+    .about-hero-photo { animation: about-hero-breathe 18s ease-in-out infinite alternate; transform-origin: center; }
+    @keyframes about-hero-breathe { from { transform: scale(1); } to { transform: scale(1.075); } }
+    @keyframes about-enter { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+    .about-intro-1 { animation: about-enter 700ms 100ms both ease-out; }
+    .about-intro-2 { animation: about-enter 750ms 240ms both ease-out; }
+    .about-intro-3 { animation: about-enter 750ms 390ms both ease-out; }
+    .about-intro-4 { animation: about-enter 750ms 540ms both ease-out; }
+    .about-image-frame { position: relative; overflow: hidden; isolation: isolate; }
+    .about-image-frame img { display: block; transition: transform 800ms cubic-bezier(.2,.7,.2,1), filter 600ms ease; }
+    .about-image-frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; border: 1px solid rgba(255,255,255,.22); border-radius: inherit; }
+    .about-image-frame:hover img { transform: scale(1.065); filter: saturate(1.08); }
+    .about-cta { cursor: pointer; transition: transform 280ms ease, box-shadow 280ms ease, background-color 280ms ease, color 280ms ease, border-color 280ms ease; }
+    .about-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 26px rgba(20,12,7,.19); }
+    .about-cta .about-arrow { display: inline-block; transition: transform 280ms ease; }
+    .about-cta:hover .about-arrow { transform: translateX(5px); }
+    .about-feature { transition: transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease; }
+    .about-feature:hover { transform: translateY(-7px); box-shadow: 0 24px 45px rgba(31,20,14,.16); border-color: rgba(183,121,70,.75); }
+    .about-feature .feature-symbol { transition: transform 350ms ease, background-color 350ms ease; }
+    .about-feature:hover .feature-symbol { transform: translateY(-3px) rotate(-5deg) scale(1.07); }
+    .about-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(183,121,70,.65), transparent); }
+    .about-stamp { transform: rotate(-7deg); transition: transform 350ms ease; }
+    .about-stamp:hover { transform: rotate(0deg) scale(1.04); }
+    .about-motif { background-image: radial-gradient(rgba(183,121,70,.22) 1px, transparent 1px); background-size: 18px 18px; }
+    .about-quote-mark { font-family: Georgia, serif; line-height: .75; }
+    @supports (animation-timeline: view()) {
+      .about-reveal { animation: about-enter 1s ease both; animation-timeline: view(); animation-range: entry 8% cover 28%; }
+    }
+    @media (hover: none) { .about-image-frame:hover img, .about-feature:hover, .about-cta:hover { transform: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .about-hero-photo, .about-intro-1, .about-intro-2, .about-intro-3, .about-intro-4, .about-reveal { animation: none !important; opacity: 1 !important; transform: none !important; }
+      .about-image-frame img, .about-cta, .about-cta .about-arrow, .about-feature, .about-feature .feature-symbol, .about-stamp { transition: none !important; }
+      .about-image-frame:hover img, .about-cta:hover, .about-feature:hover, .about-stamp:hover { transform: none !important; }
+    }
+
+    /* About v2: six-photo editorial storytelling, built with CSS only. */
+    .about-photo-spotlight { position: relative; overflow: hidden; isolation: isolate; }
+    .about-photo-spotlight img { transition: transform 900ms cubic-bezier(.2,.65,.2,1), filter 700ms ease; }
+    .about-photo-spotlight:hover img { transform: scale(1.065); filter: saturate(1.09) contrast(1.03); }
+    .about-photo-spotlight::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; border: 1px solid rgba(255,255,255,.24); }
+    .about-number { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(4.2rem, 9vw, 7rem); font-weight: 600; line-height: 1; letter-spacing: -.08em; }
+    .about-detail-card { transition: transform 340ms ease, border-color 340ms ease, background-color 340ms ease, box-shadow 340ms ease; }
+    .about-detail-card:hover { transform: translateY(-6px); border-color: #B77946; box-shadow: 0 20px 40px rgba(37,27,22,.14); }
+    .about-detail-card .about-detail-icon { transition: transform 340ms ease; }
+    .about-detail-card:hover .about-detail-icon { transform: rotate(-7deg) scale(1.1); }
+    .about-photo-caption { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .about-rule { height: 1px; background: linear-gradient(90deg, #B77946 0%, rgba(183,121,70,.18) 70%, transparent 100%); }
+    .about-section-link { display: inline-flex; align-items: center; gap: .7rem; transition: color 250ms ease; }
+    .about-section-link .about-arrow { transition: transform 250ms ease; }
+    .about-section-link:hover .about-arrow { transform: translateX(6px); }
+    .about-value-row { transition: padding-left 300ms ease, border-color 300ms ease; }
+    .about-value-row:hover { padding-left: .6rem; border-color: #E6AC78; }
+    @media (prefers-reduced-motion: reduce) {
+      .about-photo-spotlight img, .about-detail-card, .about-detail-card .about-detail-icon,
+      .about-section-link, .about-section-link .about-arrow, .about-value-row { transition: none !important; }
+      .about-photo-spotlight:hover img, .about-detail-card:hover, .about-detail-card:hover .about-detail-icon,
+      .about-section-link:hover .about-arrow { transform: none !important; }
+    }
+  
+
+    /* Chapter & Chai: coordinated hero and mobile navigation motion — CSS only. */
+    @keyframes cc-hero-drift {
+      from { transform: scale(1.015); }
+      to { transform: scale(1.085); }
+    }
+    @keyframes cc-hero-rise {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cc-hero-photo {
+      animation: cc-hero-drift 18s ease-in-out infinite alternate;
+      transform-origin: center center;
+      will-change: transform;
+    }
+    .cc-hero-in-1, .cc-hero-in-2, .cc-hero-in-3, .cc-hero-in-4 {
+      animation: cc-hero-rise 760ms cubic-bezier(.2,.75,.25,1) both;
+    }
+    .cc-hero-in-1 { animation-delay: 100ms; }
+    .cc-hero-in-2 { animation-delay: 240ms; }
+    .cc-hero-in-3 { animation-delay: 390ms; }
+    .cc-hero-in-4 { animation-delay: 540ms; }
+
+    /* Native <details> keeps the hamburger keyboard-friendly and JS-free. */
+    .cc-mobile-menu > .cc-menu-trigger {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+    }
+    .cc-mobile-menu > .cc-menu-trigger::-webkit-details-marker { display: none; }
+    .cc-menu-icon {
+      display: inline-flex;
+      width: 18px;
+      height: 16px;
+      flex: 0 0 18px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cc-menu-icon > span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background: currentColor;
+      transform-origin: center;
+      transition: transform 260ms ease, opacity 200ms ease;
+    }
+    .cc-mobile-menu[open] .cc-menu-icon > span:first-child { transform: translateY(7px) rotate(45deg); }
+    .cc-mobile-menu[open] .cc-menu-icon > span:nth-child(2) { opacity: 0; transform: scaleX(.35); }
+    .cc-mobile-menu[open] .cc-menu-icon > span:last-child { transform: translateY(-7px) rotate(-45deg); }
+    .cc-menu-panel { transform-origin: top right; }
+    @keyframes cc-menu-drop {
+      from { opacity: 0; transform: translateY(-10px) scale(.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .cc-mobile-menu[open] > .cc-menu-panel {
+      animation: cc-menu-drop 260ms cubic-bezier(.2,.75,.25,1) both;
+    }
+    /* Where supported, keep the native details content visible until the close fade finishes. */
+    @supports selector(details::details-content) {
+      .cc-mobile-menu::details-content {
+        opacity: 0;
+        transition: opacity 220ms ease, content-visibility 220ms allow-discrete;
+      }
+      .cc-mobile-menu[open]::details-content { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cc-hero-photo, .cc-hero-in-1, .cc-hero-in-2, .cc-hero-in-3, .cc-hero-in-4,
+      .cc-mobile-menu[open] > .cc-menu-panel {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        will-change: auto;
+      }
+      .cc-menu-icon > span { transition: none !important; }
+      .cc-mobile-menu::details-content { transition: none !important; }
+    }
+
+    /* Preserve horizontal centering when the scroll cue is hovered. */
+    .about-cta[aria-label="Scroll to our story"],
+    .about-cta[aria-label="Scroll to our story"]:hover {
+      transform: translateX(-50%);
+    }
+    .about-cta[aria-label="Scroll to our story"]:hover { box-shadow: none; }
+  </style>
+</head>
+
+<body class="min-w-0 bg-[#F5EBDD] font-['Inter'] text-[#251B16] antialiased dark:bg-[#251B16] dark:text-[#F5EBDD]">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#251B16] focus:outline focus:outline-2 focus:outline-[#B77946]">Skip to main content</a>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header fixed inset-x-0 top-0 z-40 text-[#F5EBDD]">
+    <nav aria-label="Main navigation"
+      class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-10">
+      <a href="index.html" aria-label="Chapter and Chai, home"
+        class="inline-flex items-center gap-2 shrink-0 rounded-sm font-['Playfair_Display'] text-xl font-bold tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78] sm:text-2xl">
+        <img src="assets/images/logo/chapter-and-chai-mark.webp" alt="" aria-hidden="true" width="44" height="44"
+          decoding="async" class="h-9 w-9 shrink-0 object-contain sm:h-11 sm:w-11">
+        <span class="whitespace-nowrap">Chapter <span class="text-[#E6AC78]">&amp;</span> Chai<span
+            class="text-[#E6AC78]">.</span></span>
+      </a>
+      <div class="hidden items-center gap-6 md:flex lg:gap-8">
+        <a href="index.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Home</a>
+        <a href="menu.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Menu</a>
+        <a href="gallery.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Gallery</a>
+        <a href="events.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Events</a>
+        <a href="about.html" aria-current="page"
+          class="border-b-2 border-[#E6AC78] pb-1 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">About Us</a>
+        <a href="contact.html"
+          class="rounded-sm transition-colors hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">Contact</a>
+      </div>
+      <a href="contact.html"
+        class="hidden shrink-0 rounded-full bg-[#B77946] px-6 py-3 text-sm font-semibold text-[#251B16] transition-colors hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:inline-flex">Visit
+        Our Café</a>
+      <details class="cc-mobile-menu relative md:hidden">
+        <summary
+          class="cc-menu-trigger cursor-pointer list-none rounded-lg border border-[#E6AC78]/70 px-3 py-2 text-sm font-semibold transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E6AC78]">
+          Menu <span class="cc-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></summary>
+        <div
+          class="cc-menu-panel absolute right-0 top-full mt-3 flex w-44 flex-col gap-1 rounded-xl border border-[#E6AC78]/20 bg-[#251B16] p-2 shadow-2xl">
+          <a href="index.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a>
+          <a href="menu.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a>
+          <a href="gallery.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a>
+          <a href="events.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a>
+          <a href="about.html" aria-current="page"
+            class="rounded-lg bg-white/10 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">About Us</a>
+          <a href="contact.html"
+            class="rounded-lg px-3 py-2 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main-content">
+    <!-- 01 / HERO — Jaipur architecture: the heart of the brand. -->
+    <section aria-labelledby="about-title" class="relative isolate flex min-h-[690px] items-center overflow-hidden bg-[#251B16] pb-24 pt-36 text-white sm:min-h-[740px] lg:min-h-[810px] lg:pb-28">
+      <img src="assets/images/About Page/about-hero.jpeg" alt="Warm Jaipur heritage architecture with ornate details" width="1600" height="1000" fetchpriority="high" class="about-hero-photo absolute inset-0 -z-30 h-full w-full object-cover object-center">
+      <div aria-hidden="true" class="absolute inset-0 -z-20 bg-gradient-to-r from-[#130C08]/95 via-[#1C110B]/80 to-[#1B110C]/35"></div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-t from-[#1A100B]/90 via-transparent to-[#1A100B]/35"></div>
+      <div class="relative mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_190px] lg:items-end lg:px-10">
+        <div class="max-w-4xl">
+          <div class="about-intro-1 mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#F1BC8A] sm:text-sm"><span aria-hidden="true" class="h-px w-9 bg-[#E6AC78]"></span> Our Story · Jaipur</div>
+          <h1 id="about-title" class="about-intro-2 max-w-4xl font-['Playfair_Display'] text-[clamp(2.7rem,7vw,6.2rem)] font-semibold leading-[1.09] tracking-tight">Every Place Has a Story. <span class="block italic text-[#E6AC78]">Ours Begins Here.</span></h1>
+          <p class="about-intro-3 mt-7 max-w-2xl text-base leading-8 text-[#F7EBDD]/95 sm:text-lg sm:leading-9">A little warmth from Jaipur, the comfort of a familiar cup, and stories waiting to be discovered. Welcome to Chapter &amp; Chai — where every visit feels like turning to your favourite page.</p>
+          <div class="about-intro-4 mt-9 flex flex-wrap gap-3">
+            <a href="#our-story" class="about-cta inline-flex items-center justify-center gap-3 rounded-full bg-[#B77946] px-7 py-4 text-sm font-bold text-[#251B16] hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Discover Our Story <span aria-hidden="true" class="about-arrow">→</span></a>
+            <a href="gallery.html" class="about-cta inline-flex items-center justify-center gap-3 rounded-full border border-white/70 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Explore Our Space <span aria-hidden="true" class="about-arrow">↗</span></a>
+          </div>
+        </div>
+        <div class="about-intro-4 hidden border-l border-white/35 pl-5 lg:block"><p class="font-['Playfair_Display'] text-4xl italic text-[#E6AC78]">Slow down.</p><p class="mt-3 text-xs uppercase leading-6 tracking-[0.19em] text-white/80">There is always time for one more chapter.</p></div>
+      </div>
+      <a href="#our-story" aria-label="Scroll to our story" class="about-cta absolute bottom-7 left-1/2 -translate-x-1/2 rounded-full border border-white/35 bg-black/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Scroll to explore ↓</a>
+    </section>
+
+    <!-- Brand signature / no filler text. -->
+    <section aria-label="What makes Chapter and Chai special" class="bg-[#B77946] text-[#251B16]">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 text-center text-[11px] font-bold uppercase tracking-[0.11em] sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-6 sm:px-6 sm:text-xs lg:px-10">
+        <span>☕ Thoughtful Brews</span><span aria-hidden="true" class="hidden sm:inline">✦</span><span>📚 Stories &amp; Shelves</span><span aria-hidden="true" class="hidden sm:inline">✦</span><span class="col-span-2">♡ A Space to Belong</span>
+      </div>
+    </section>
+
+    <!-- 02 / OUR STORY — use the actual about-story image. -->
+    <section id="our-story" aria-labelledby="story-title" class="scroll-mt-24 overflow-hidden bg-[#F5EBDD] py-20 dark:bg-[#251B16] sm:py-24 lg:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
+        <div class="about-reveal relative pb-8 pr-5 sm:pr-10">
+          <div aria-hidden="true" class="about-motif absolute -left-5 -top-5 h-36 w-36 rounded-3xl"></div>
+          <div class="about-image-frame relative rounded-[2rem] shadow-[0_24px_60px_rgba(37,27,22,.20)]"><img src="assets/images/About Page/about-story.jpeg" alt="A Jaipur haveli-inspired courtyard with heritage architecture" width="1000" height="1150" loading="lazy" decoding="async" class="h-[370px] w-full object-cover sm:h-[490px] lg:h-[590px]"></div>
+          <div class="about-stamp absolute -bottom-1 right-0 max-w-[190px] rounded-2xl border-4 border-[#F5EBDD] bg-[#B77946] px-5 py-5 text-[#251B16] shadow-xl dark:border-[#251B16] sm:max-w-[230px] sm:px-7 sm:py-6"><p class="font-['Playfair_Display'] text-xl font-bold leading-snug sm:text-2xl">Rooted in Jaipur.</p><p class="mt-2 text-[10px] font-bold uppercase tracking-[0.15em] sm:text-xs">Made for every reader</p></div>
+        </div>
+        <div class="about-reveal">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.23em] text-[#99602F] dark:text-[#E6AC78]">01 / The Story Behind Chapter &amp; Chai</p>
+          <h2 id="story-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.16] sm:text-5xl lg:text-[3.5rem]">Inspired by the Pink City. <span class="text-[#99602F] dark:text-[#E6AC78]">Made for the Love of Stories.</span></h2>
+          <div class="my-7 h-1 w-20 rounded-full bg-[#B77946]"></div>
+          <p class="text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">Chapter &amp; Chai brings together two simple pleasures: a beautifully brewed cup and a story worth getting lost in. Our space takes its warmth from Jaipur's timeless charm, its unhurried conversations and its welcoming spirit.</p>
+          <p class="mt-5 text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">We believe a café can be more than somewhere to stop for coffee. It can be your favourite reading corner, a place to meet an old friend, or the beginning of an unexpected conversation.</p>
+          <p class="mt-5 font-['Playfair_Display'] text-xl italic leading-8 text-[#865127] dark:text-[#F1BC8A]">Come as you are. Stay for a while. Leave with a story.</p>
+          <a href="gallery.html" class="about-cta mt-8 inline-flex items-center gap-3 rounded-full border border-[#251B16] px-6 py-3.5 text-sm font-semibold text-[#251B16] hover:bg-[#251B16] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:border-[#E6AC78] dark:text-[#F5EBDD] dark:hover:bg-[#E6AC78] dark:hover:text-[#251B16]">Take a Look Inside <span class="about-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / OUR PHILOSOPHY — books + coffee photo. -->
+    <section id="our-philosophy" aria-labelledby="philosophy-title"
+      class="relative isolate overflow-hidden bg-[#281D17] py-20 text-[#F5EBDD] sm:py-24 lg:py-28">
+      <div aria-hidden="true" class="pointer-events-none absolute -left-44 top-20 h-[500px] w-[500px] rounded-full bg-[#B77946]/10 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
+        <div class="about-reveal order-2 lg:order-1">
+          <div class="mb-5 flex items-center gap-3"><span class="h-px w-9 bg-[#E6AC78]"></span><p class="text-xs font-bold uppercase tracking-[0.23em] text-[#E6AC78]">02 / Our Philosophy</p></div>
+          <h2 id="philosophy-title" class="max-w-xl font-['Playfair_Display'] text-4xl font-semibold leading-[1.13] sm:text-5xl lg:text-[3.5rem]">A Good Book. A Warm Cup. <span class="italic text-[#E6AC78]">A Moment of Your Own.</span></h2>
+          <p class="mt-7 max-w-xl text-base leading-8 text-[#E9DACA]">Some of life's best moments are beautifully simple. The aroma of freshly brewed coffee, the comfort of chai, and a story that makes the world outside fade away.</p>
+          <p class="mt-4 max-w-xl leading-8 text-[#E9DACA]">At Chapter &amp; Chai, we believe slowing down is something to celebrate. Every table is an invitation to pause, discover and enjoy the present.</p>
+          <div class="mt-9 space-y-5">
+            <div class="about-value-row flex gap-4 border-l-2 border-[#B77946] pl-5"><span class="font-['Playfair_Display'] text-2xl text-[#E6AC78]">01</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Sip slowly</h3><p class="mt-1 text-sm leading-7 text-[#E9DACA]">Give every cup the time it deserves.</p></div></div>
+            <div class="about-value-row flex gap-4 border-l-2 border-[#B77946] pl-5"><span class="font-['Playfair_Display'] text-2xl text-[#E6AC78]">02</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Read freely</h3><p class="mt-1 text-sm leading-7 text-[#E9DACA]">Get lost in a story, or discover a new favourite.</p></div></div>
+            <div class="about-value-row flex gap-4 border-l-2 border-[#B77946] pl-5"><span class="font-['Playfair_Display'] text-2xl text-[#E6AC78]">03</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Feel at home</h3><p class="mt-1 text-sm leading-7 text-[#E9DACA]">There is no hurry when you belong.</p></div></div>
+          </div>
+          <a href="menu.html" class="about-cta mt-10 inline-flex items-center gap-3 rounded-full bg-[#B77946] px-7 py-4 text-sm font-bold text-[#251B16] hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Find Your Perfect Cup <span class="about-arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="about-reveal relative order-1 mx-auto w-full max-w-[590px] lg:order-2">
+          <figure class="about-photo-spotlight relative overflow-hidden rounded-[2rem] border border-[#B77946]/40 shadow-[0_28px_70px_rgba(0,0,0,.32)]">
+            <img src="assets/images/About Page/about-books.jpeg" alt="A book and a warm cup of coffee resting together on a table" width="1050" height="1250" loading="lazy" decoding="async" class="h-[400px] w-full object-cover sm:h-[560px] lg:h-[620px]">
+            <figcaption class="about-photo-caption absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#251B16]/80 p-5 text-[#F5EBDD] shadow-xl sm:bottom-7 sm:left-7 sm:right-auto sm:max-w-[320px] sm:p-6">
+              <span class="block text-[10px] font-bold uppercase tracking-[0.22em] text-[#E6AC78]">The Chapter &amp; Chai way</span>
+              <span class="mt-2 block font-['Playfair_Display'] text-xl italic leading-snug sm:text-2xl">“One more sip. One more page.”</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / CRAFT — barista image with meaningful detail. -->
+    <section id="crafted-with-care" aria-labelledby="craft-title" class="overflow-hidden bg-[#FFF9F1] py-20 dark:bg-[#32241D] sm:py-24 lg:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
+        <div class="about-reveal relative order-1 lg:order-2">
+          <div class="about-image-frame rounded-[2rem] shadow-[0_22px_55px_rgba(37,27,22,.17)]"><img src="assets/images/About Page/about-barista.jpeg" alt="A barista carefully preparing a fresh espresso" width="1100" height="1100" loading="lazy" decoding="async" class="h-[370px] w-full object-cover sm:h-[480px] lg:h-[570px]"></div>
+          <div class="absolute -bottom-5 left-4 rounded-2xl bg-[#251B16] px-6 py-4 text-[#F5EBDD] shadow-xl sm:-left-6"><span class="block text-xs font-bold uppercase tracking-[0.19em] text-[#E6AC78]">The little details</span><span class="mt-1 block font-['Playfair_Display'] text-xl italic">Make every cup count.</span></div>
+        </div>
+        <div class="about-reveal order-2 lg:order-1">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.23em] text-[#99602F] dark:text-[#E6AC78]">03 / Crafted With Care</p>
+          <h2 id="craft-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.16] sm:text-5xl lg:text-[3.5rem]">Behind Every Cup, <span class="text-[#99602F] dark:text-[#E6AC78]">A Little More Heart.</span></h2>
+          <p class="mt-6 leading-8 text-[#59483B] dark:text-[#E9DACA]">From the comforting spice of masala chai to the rich aroma of freshly pulled espresso, our drinks are made for moments worth lingering over.</p>
+          <p class="mt-4 leading-8 text-[#59483B] dark:text-[#E9DACA]">It's the care in the preparation, the warmth of the welcome and the simple pleasure of finding just the right cup for your next chapter.</p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-[#E0CBB4] bg-[#F5EBDD] p-5 dark:border-[#6A5142] dark:bg-[#3B2B23]"><span aria-hidden="true" class="text-2xl">☕</span><h3 class="mt-3 font-['Playfair_Display'] text-xl font-semibold">Brews with character</h3><p class="mt-2 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Classic favourites and comforting Indian chai.</p></div>
+            <div class="rounded-2xl border border-[#E0CBB4] bg-[#F5EBDD] p-5 dark:border-[#6A5142] dark:bg-[#3B2B23]"><span aria-hidden="true" class="text-2xl">🥐</span><h3 class="mt-3 font-['Playfair_Display'] text-xl font-semibold">A little something extra</h3><p class="mt-2 text-sm leading-6 text-[#59483B] dark:text-[#E9DACA]">Fresh bakes and treats to accompany every story.</p></div>
+          </div>
+          <a href="menu.html" class="about-cta mt-8 inline-flex items-center gap-3 rounded-full bg-[#251B16] px-7 py-4 text-sm font-semibold text-white hover:bg-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]">Explore Our Menu <span aria-hidden="true" class="about-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 / OUR COMMUNITY — reader photograph, stories and connection. -->
+    <section id="our-community" aria-labelledby="community-title"
+      class="relative overflow-hidden bg-[#EADBC7] py-20 dark:bg-[#251B16] sm:py-24 lg:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
+        <div class="about-reveal relative mx-auto w-full max-w-[570px] pb-9 pl-3 sm:pl-8">
+          <div aria-hidden="true" class="about-motif absolute -left-2 -top-5 h-40 w-40 rounded-3xl"></div>
+          <figure class="about-photo-spotlight relative overflow-hidden rounded-[2rem] shadow-[0_26px_60px_rgba(37,27,22,.22)]">
+            <img src="assets/images/About Page/about-community.jpeg" alt="A reader enjoying a quiet moment with a book" width="1050" height="1250" loading="lazy" decoding="async" class="h-[390px] w-full object-cover sm:h-[540px] lg:h-[610px]">
+            <figcaption class="about-photo-caption absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#251B16]/80 p-5 text-[#F5EBDD] sm:bottom-7 sm:left-7 sm:right-auto sm:max-w-[310px] sm:p-6">
+              <span class="block text-[10px] font-bold uppercase tracking-[0.22em] text-[#E6AC78]">Find your people</span>
+              <span class="mt-2 block font-['Playfair_Display'] text-xl italic leading-snug sm:text-2xl">Every reader has a story.</span>
+            </figcaption>
+          </figure>
+          <div aria-hidden="true" class="about-stamp absolute bottom-0 right-0 rounded-2xl border-4 border-[#EADBC7] bg-[#B77946] px-5 py-4 text-[#251B16] shadow-xl dark:border-[#251B16] sm:px-7 sm:py-5"><span class="font-['Playfair_Display'] text-lg font-semibold sm:text-xl">Belong. Connect. Read.</span></div>
+        </div>
+        <div class="about-reveal">
+          <div class="mb-5 flex items-center gap-3"><span class="h-px w-9 bg-[#99602F] dark:bg-[#E6AC78]"></span><p class="text-xs font-bold uppercase tracking-[0.23em] text-[#99602F] dark:text-[#E6AC78]">04 / Our Community</p></div>
+          <h2 id="community-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.14] sm:text-5xl lg:text-[3.5rem]">A Home for Readers. <span class="italic text-[#99602F] dark:text-[#E6AC78]">A Place for Everyone.</span></h2>
+          <p class="mt-7 text-base leading-8 text-[#59483B] dark:text-[#E9DACA]">Stories have a wonderful way of bringing people together. From someone reading quietly by the window to friends sharing their favourite authors, every visit adds a new chapter to our community.</p>
+          <p class="mt-4 leading-8 text-[#59483B] dark:text-[#E9DACA]">Join us for conversations, poetry evenings and bookish gatherings — or simply bring your current read and enjoy your own little corner.</p>
+          <div class="mt-9 grid gap-4 sm:grid-cols-2">
+            <article class="about-detail-card rounded-[1.5rem] border border-[#D4B99A] bg-[#FFF9F1]/90 p-5 dark:border-[#665042] dark:bg-[#3B2B23] sm:p-6">
+              <span aria-hidden="true" class="about-detail-icon block text-3xl">📖</span><h3 class="mt-4 font-['Playfair_Display'] text-xl font-semibold">Reading Circles</h3><p class="mt-2 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Discover new voices and share favourite chapters.</p>
+            </article>
+            <article class="about-detail-card rounded-[1.5rem] border border-[#D4B99A] bg-[#FFF9F1]/90 p-5 dark:border-[#665042] dark:bg-[#3B2B23] sm:p-6">
+              <span aria-hidden="true" class="about-detail-icon block text-3xl">✦</span><h3 class="mt-4 font-['Playfair_Display'] text-xl font-semibold">Creative Evenings</h3><p class="mt-2 text-sm leading-7 text-[#59483B] dark:text-[#E9DACA]">Make room for poetry, ideas and new friendships.</p>
+            </article>
+          </div>
+          <a href="events.html" class="about-cta mt-9 inline-flex items-center gap-3 rounded-full bg-[#251B16] px-7 py-4 text-sm font-semibold text-white hover:bg-[#99602F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B77946] dark:bg-[#B77946] dark:text-[#251B16] dark:hover:bg-[#E6AC78]">Explore Our Events <span class="about-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 / OUR VALUES — the cozy reading photo has its own dedicated section. -->
+    <section id="our-values" aria-labelledby="values-title" class="relative isolate overflow-hidden bg-[#32241D] py-20 text-[#F5EBDD] sm:py-24 lg:py-28">
+      <div aria-hidden="true" class="pointer-events-none absolute -right-40 bottom-0 -z-10 h-[480px] w-[480px] rounded-full bg-[#B77946]/10 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
+        <div class="about-reveal order-2 lg:order-1">
+          <div class="mb-5 flex items-center gap-3"><span class="h-px w-9 bg-[#E6AC78]"></span><p class="text-xs font-bold uppercase tracking-[0.23em] text-[#E6AC78]">05 / Our Values</p></div>
+          <h2 id="values-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-[1.14] sm:text-5xl lg:text-[3.5rem]">The Little Things <span class="italic text-[#E6AC78]">That Matter Most.</span></h2>
+          <p class="mt-7 max-w-xl leading-8 text-[#E9DACA]">The warmest places are made of small, thoughtful moments. Here's what we hope you feel every time you walk through our doors.</p>
+          <div class="mt-9 grid gap-4">
+            <article class="about-detail-card flex items-start gap-5 rounded-2xl border border-white/15 bg-white/5 p-5 sm:p-6">
+              <span aria-hidden="true" class="about-detail-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#B77946]/20 text-2xl">♡</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Warmth in Every Welcome</h3><p class="mt-2 text-sm leading-7 text-[#E9DACA]">Come alone, bring a friend, or settle in with a book. You belong here.</p></div>
+            </article>
+            <article class="about-detail-card flex items-start gap-5 rounded-2xl border border-white/15 bg-white/5 p-5 sm:p-6">
+              <span aria-hidden="true" class="about-detail-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#B77946]/20 text-2xl">☕</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Care in Every Cup</h3><p class="mt-2 text-sm leading-7 text-[#E9DACA]">Good ingredients, thoughtful preparation and time to enjoy the result.</p></div>
+            </article>
+            <article class="about-detail-card flex items-start gap-5 rounded-2xl border border-white/15 bg-white/5 p-5 sm:p-6">
+              <span aria-hidden="true" class="about-detail-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#B77946]/20 text-2xl">✧</span><div><h3 class="font-['Playfair_Display'] text-xl font-semibold">Space to Slow Down</h3><p class="mt-2 text-sm leading-7 text-[#E9DACA]">A quiet seat, a familiar aroma and a moment to simply be.</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="about-reveal relative order-1 mx-auto w-full max-w-[590px] lg:order-2">
+          <figure class="about-photo-spotlight relative overflow-hidden rounded-[2rem] border border-[#B77946]/40 shadow-[0_30px_70px_rgba(0,0,0,.30)]">
+            <img src="assets/images/About Page/about-cozy.jpeg" alt="A cozy reading space with books and a warm drink" width="1050" height="1250" loading="lazy" decoding="async" class="h-[400px] w-full object-cover sm:h-[530px] lg:h-[570px]">
+            <figcaption class="about-photo-caption absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#251B16]/80 p-5 text-[#F5EBDD] sm:bottom-7 sm:left-7 sm:right-auto sm:max-w-[320px] sm:p-6"><span class="block text-[10px] font-bold uppercase tracking-[0.22em] text-[#E6AC78]">Our promise</span><span class="mt-2 block font-['Playfair_Display'] text-xl italic leading-snug sm:text-2xl">“Come in. Get comfortable. Stay a while.”</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 / VISIT CTA -->
+    <section aria-labelledby="visit-about-title" class="about-visit-cta relative isolate overflow-hidden py-20 text-[#F5EBDD] sm:py-24">
+      <div aria-hidden="true" class="absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-[#B77946]/20 blur-3xl"></div>
+      <div class="about-reveal mx-auto flex max-w-7xl flex-col items-start justify-between gap-9 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-10"><div class="max-w-3xl"><p class="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#E6AC78]">Your Next Chapter Awaits</p><h2 id="visit-about-title" class="font-['Playfair_Display'] text-4xl font-semibold leading-tight sm:text-5xl">Pull Up a Chair. <span class="italic text-[#E6AC78]">Stay a Little Longer.</span></h2><p class="mt-5 max-w-xl leading-8 text-[#E9DACA]">There's always a good story and a comforting cup waiting at Chapter &amp; Chai.</p></div><a href="contact.html" class="about-cta inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#B77946] px-8 py-4 text-sm font-bold text-[#251B16] hover:bg-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Visit Our Café <span aria-hidden="true" class="about-arrow">→</span></a></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1B1410] text-[#F5EBDD]">
+    <div class="mx-auto grid max-w-7xl gap-11 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:gap-14 lg:px-10">
+      <!-- Brand and social links -->
+      <div class="min-w-0">
+        <a href="index.html" aria-label="Chapter and Chai home"
+          class="inline-block rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+          <img src="assets/images/logo/chapter-and-chai-logo.webp"
+            alt="Chapter &amp; Chai — Books, Coffee, Conversations" width="640" height="640" loading="lazy"
+            decoding="async" class="h-auto w-36 sm:w-44">
+        </a>
+        <p class="mt-4 max-w-sm leading-7 text-[#E9DACA]">A cozy book café for coffee lovers, bookworms and good
+          conversations.</p>
+        <div class="mt-6">
+          <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Follow &amp; Connect</h2>
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            <a href="https://www.instagram.com/heyyyy.salman/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram — visit the creator's profile (opens in a new tab)" title="Instagram"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#B77946]/60 text-[#F5EBDD] transition-colors hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.7" cy="6.4" r="1" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook — demo link to Facebook homepage (opens in a new tab)" title="Facebook (demo)"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#B77946]/60 text-[#F5EBDD] transition-colors hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                <path
+                  d="M14.2 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2a22 22 0 0 0-2.5-.2c-2.5 0-4.2 1.5-4.2 4.3v2.5H8V13h2.8v8h3.4Z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="YouTube — demo link to YouTube homepage (opens in a new tab)" title="YouTube (demo)"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#B77946]/60 text-[#F5EBDD] transition-colors hover:border-[#E6AC78] hover:bg-[#B77946] hover:text-[#251B16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E6AC78]">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+                <rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.8"></rect>
+                <path d="m10 9 6 3-6 3V9Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Internal navigation -->
+      <div class="min-w-0">
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Explore</h2>
+        <ul class="mt-5 space-y-3">
+          <li><a href="index.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Home</a>
+          </li>
+          <li><a href="menu.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Menu</a>
+          </li>
+          <li><a href="gallery.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Gallery</a>
+          </li>
+          <li><a href="events.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Events</a>
+          </li>
+          <li><a href="about.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">About Us</a>
+          </li>
+          <li><a href="contact.html"
+              class="hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Consistent location and contact details -->
+      <div class="min-w-0">
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-[#E6AC78]">Visit &amp; Connect</h2>
+        <address class="mt-5 not-italic leading-7 text-[#E9DACA]">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Statue%20Circle%2C%20C-Scheme%2C%20Jaipur%2C%20Rajasthan%20302001%2C%20India"
+            target="_blank" rel="noopener noreferrer"
+            class="underline decoration-[#B77946] underline-offset-4 hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">
+            Statue Circle, C-Scheme<br>Jaipur, Rajasthan 302001, India
+          </a>
+        </address>
+        <p class="mt-4 text-sm leading-7 text-[#E9DACA]">Phone: <a href="tel:+91982916724"
+            class="break-words underline decoration-[#B77946] underline-offset-4 hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">+91
+            9829166724</a></p>
+        <p class="mt-2 text-sm leading-7 text-[#E9DACA]">Email: <a href="mailto:hello@chapterandchai.com"
+            class="break-all underline decoration-[#B77946] underline-offset-4 hover:text-[#E6AC78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E6AC78]">hello@chapterandchai.com</a>
+        </p>
+        <p class="mt-4 text-sm leading-7 text-[#E9DACA]">Hours: 9:00 AM – 10:00 PM daily</p>
+      </div>
+    </div>
+    <div class="border-t border-white/15 px-4 py-5 text-center text-xs leading-6 text-[#E9DACA] sm:px-6">
+      <p>© 2026 Chapter &amp; Chai. All Right Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
